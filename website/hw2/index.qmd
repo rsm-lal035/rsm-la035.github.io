@@ -25,7 +25,7 @@ import statsmodels.formula.api as smf
 import matplotlib.pyplot as plt
 from IPython.display import display
 
-df = pd.read_stata("AERtables1-5.dta")
+df = pd.read_stata("../../AERtables1-5.dta")
 df.columns = [c.lower() for c in df.columns]
 
 def pick(cands):
