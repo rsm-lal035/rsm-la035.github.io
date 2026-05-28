@@ -90,7 +90,7 @@ format:
 :::
 
 ::: {.column width="48%"}
-<div style="display:flex; flex-direction:column; gap:14px; margin-top:4px;">
+<div style="display:flex; flex-direction:column; gap:8px; margin-top:0px;">
 
 <div style="display:flex; align-items:flex-start; gap:12px;">
   <div class="step-num">1</div>
