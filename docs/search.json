@@ -25,7 +25,7 @@
     "href": "projects.html",
     "title": "My Projects",
     "section": "",
-    "text": "A/B Testing a Call to Action\n\n\n\n\n\n\nLawrence Lin\n\n\nMay 27, 2026\n\n\n\n\n\n\n\n\n\n\n\nMaxDiff Analysis of MSBA Class Preferences\n\n\n\n\n\n\nLawrence Lin\n\n\nMay 27, 2026\n\n\n\n\n\n\n\n\n\n\n\nPoisson Regression and Maximum Likelihood Estimation\n\n\n\n\n\n\nLawrence Lin\n\n\nMay 27, 2026\n\n\n\n\n\n\n\n\n\n\n\nReplication of Karlan and List (2007)\n\n\n\n\n\n\nLawrence Lin\n\n\nMay 27, 2026\n\n\n\n\n\n\nNo matching items"
+    "text": "A/B Testing a Call to Action\n\n\n\n\n\n\nLawrence Lin\n\n\nMay 28, 2026\n\n\n\n\n\n\n\n\n\n\n\nMaxDiff Analysis of MSBA Class Preferences\n\n\n\n\n\n\nLawrence Lin\n\n\nMay 28, 2026\n\n\n\n\n\n\n\n\n\n\n\nPoisson Regression and Maximum Likelihood Estimation\n\n\n\n\n\n\nLawrence Lin\n\n\nMay 28, 2026\n\n\n\n\n\n\n\n\n\n\n\nReplication of Karlan and List (2007)\n\n\n\n\n\n\nLawrence Lin\n\n\nMay 28, 2026\n\n\n\n\n\n\n\n\n\n\n\nStatic Image vs. Dynamic Dashboard\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -404,5 +404,257 @@
     "title": "MaxDiff Analysis of MSBA Class Preferences",
     "section": "Discussion",
     "text": "Discussion\n\nOverall, the three methods tell a consistent story about MSBA class preferences. The strongest result is that MGTA 495 Marketing Analytics is the most preferred class in the survey. It has the highest simple counts score and also receives the largest share of preference in the MNL-based models. The next strongest classes are generally MGTA 453 Business Analytics and MGTA 455 Customer Analytics, suggesting that students are especially interested in courses that connect analytics directly to business and marketing decision-making.At the other end of the ranking, MGTA 444 Analytics Consulting is the least preferred class in the counts analysis and remains near the bottom in the MNL and Bayesian results. Other lower-ranked classes include MGTA 451 Marketing/Finance/Operations and MGTA 403 AI Math, Programming, & Analytics. This does not necessarily mean these classes are unimportant. Some may be more technical, more foundational, or less immediately attractive from a student-choice perspective. MaxDiff measures relative preference, not objective course value.Methodologically, the counts analysis is useful as a quick descriptive summary. It is easy to explain: for each class, we compare how often it was chosen as best versus how often it was chosen as worst. This makes counts analysis a good option for an executive dashboard or a first look at the data. However, it is less formal than the model-based approaches.The MLE MNL model is more rigorous because it models the actual choice process. Each task contributes information not only through the selected best and worst items, but also through the alternatives that were shown and not selected. The MNL results are helpful when we want formal utility estimates, standard errors, and shares of preference that can be compared across classes.The Bayesian MNL model gives very similar point estimates to the MLE model, which is reassuring. Its main advantage is uncertainty quantification. Because the Bayesian approach produces posterior draws, it is straightforward to transform every draw into shares of preference and then summarize uncertainty with credible intervals. This would be especially useful for simulations, such as predicting demand for a new class or estimating how preferences might change if the course menu changed.There are several caveats. The survey respondents are a self-selected sample of MSBA students, so the results may not generalize to all students or future cohorts. Preferences may also depend on prior coursework, career goals, current academic standing, instructor reputation, and how familiar students are with each course. In addition, the order and wording of class descriptions may affect how students interpret the choices.If I had more time, I would extend the model to estimate individual-level preferences rather than only aggregate preferences. A hierarchical Bayesian model would be useful because it could show whether different groups of students prefer different types of classes. I would also collect background information such as career interest, technical experience, and program stage to better explain why students prefer certain classes over others."
+  },
+  {
+    "objectID": "presentation.html#section",
+    "href": "presentation.html#section",
+    "title": "Embedding a Live Tableau Dashboard into Quarto",
+    "section": "",
+    "text": "Embedding a Live Tableau Dashboardinto Your Quarto Website\n\n\nFrom static screenshot → fully interactive analytics\n\n\nQuarto Tableau Public revealjs"
+  },
+  {
+    "objectID": "presentation.html#static-image-vs.-dynamic-dashboard",
+    "href": "presentation.html#static-image-vs.-dynamic-dashboard",
+    "title": "Embedding a Live Tableau Dashboard into Quarto",
+    "section": "Static Image vs. Dynamic Dashboard",
+    "text": "Static Image vs. Dynamic Dashboard\n\n01 / WHY IT MATTERS\n\n\n\n\n\n🖼️\n\n\nScreenshot (before)\n\n\nFrozen in time. Visitors cannot filter, drill down, or interact. Loses value immediately after publishing.\n\n\n\n\n\n⚡\n\n\nEmbedded (after)\n\n\nLive data from Tableau Public. Visitors use filters, tooltips, and views — just like inside Tableau.\n\n\n\n\n\n🎯\n\n\nPortfolio impact\n\n\nShows employers you can ship production-quality analytics, not just static demos."
+  },
+  {
+    "objectID": "presentation.html#two-approaches-in-quarto",
+    "href": "presentation.html#two-approaches-in-quarto",
+    "title": "Embedding a Live Tableau Dashboard into Quarto",
+    "section": "Two Approaches in Quarto",
+    "text": "Two Approaches in Quarto\n\n02 / HOW TO DO IT\n\n\n\n# experience.qmd\n\n::: {=html}\n&lt;iframe\n  src=\"https://public.tableau.com/\n  views/USRailwayEducation\n  FinalVersion/Dashboard?\n  :embed=y&:showVizHome=no\"\n  width=\"100%\" height=\"500px\"\n  frameborder=\"0\"&gt;\n&lt;/iframe&gt;\n:::\n\n✓ Simplest method · works everywhere\n\n\n\n\n\n\n1\n\n\nPublish to Tableau PublicFree. Your viz lives at a public URL with an embed code ready to use.\n\n\n\n\n2\n\n\nCopy the embed URLShare → Embed Code → extract the src URL from the iframe.\n\n\n\n\n3\n\n\nPaste into QuartoWrap in ::: {=html} block. Render — done!\n\n\n\n\n4\n\n\nOptional: Tableau JS APIControl the viz from your page: filter, highlight, listen to events."
+  },
+  {
+    "objectID": "presentation.html#live-demo-my-quarto-website",
+    "href": "presentation.html#live-demo-my-quarto-website",
+    "title": "Embedding a Live Tableau Dashboard into Quarto",
+    "section": "Live Demo — My Quarto Website",
+    "text": "Live Demo — My Quarto Website\n\n03 / LIVE DEMO\n\n\n\n\n\n\npublic.tableau.com/views/USRailwayEducationFinalVersion/Dashboard"
+  },
+  {
+    "objectID": "presentation.html#key-takeaways",
+    "href": "presentation.html#key-takeaways",
+    "title": "Embedding a Live Tableau Dashboard into Quarto",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\nA portfolio that moves\n\n\nis a portfolio that gets remembered.\n\n\n3 lines of HTML inside a ::: {=html} block is all it takes to turn a static screenshot into a live, interactive dashboard on your Quarto site.\n\n\n✓   Publish your Tableau viz to Tableau Public (free)\n\n\n✓   Grab the embed URL from Share → Embed Code\n\n\n✓   Drop an &lt;iframe&gt; into your .qmd file inside ::: {=html}\n\n\n✓   Run quarto render → push to GitHub Pages"
+  },
+  {
+    "objectID": "presentation (1).html#section",
+    "href": "presentation (1).html#section",
+    "title": "Lawrence Lin",
+    "section": "",
+    "text": "3-Minute Presentation\n\n\nEmbedding a Live Tableau Dashboardinto Your Quarto Website\n\n\nFrom static screenshot → fully interactive analytics\n\n\nQuarto Tableau Public revealjs"
+  },
+  {
+    "objectID": "presentation (1).html#static-image-vs.-dynamic-dashboard",
+    "href": "presentation (1).html#static-image-vs.-dynamic-dashboard",
+    "title": "Lawrence Lin",
+    "section": "Static Image vs. Dynamic Dashboard",
+    "text": "Static Image vs. Dynamic Dashboard\n\n01 / WHY IT MATTERS\n\n\n\n\n\n🖼️\n\n\nScreenshot (before)\n\n\nFrozen in time. Visitors cannot filter, drill down, or interact. Loses value immediately after publishing.\n\n\n\n\n\n⚡\n\n\nEmbedded (after)\n\n\nLive data from Tableau Public. Visitors use filters, tooltips, and views — just like inside Tableau.\n\n\n\n\n\n🎯\n\n\nPortfolio impact\n\n\nShows employers you can ship production-quality analytics, not just static demos."
+  },
+  {
+    "objectID": "presentation (1).html#two-approaches-in-quarto",
+    "href": "presentation (1).html#two-approaches-in-quarto",
+    "title": "Lawrence Lin",
+    "section": "Two Approaches in Quarto",
+    "text": "Two Approaches in Quarto\n\n02 / HOW TO DO IT\n\n\n\n# experience.qmd\n\n::: {=html}\n&lt;iframe\n  src=\"https://public.tableau.com/\n  views/USRailwayEducation\n  FinalVersion/Dashboard?\n  :embed=y&:showVizHome=no\"\n  width=\"100%\" height=\"500px\"\n  frameborder=\"0\"&gt;\n&lt;/iframe&gt;\n:::\n\n✓ Simplest method · works everywhere\n\n\n\n\n\n\n1\n\n\nPublish to Tableau PublicFree. Your viz lives at a public URL with an embed code ready to use.\n\n\n\n\n2\n\n\nCopy the embed URLShare → Embed Code → extract the src URL from the iframe.\n\n\n\n\n3\n\n\nPaste into QuartoWrap in ::: {=html} block. Render — done!\n\n\n\n\n4\n\n\nOptional: Tableau JS APIControl the viz from your page: filter, highlight, listen to events."
+  },
+  {
+    "objectID": "presentation (1).html#live-demo-my-quarto-website",
+    "href": "presentation (1).html#live-demo-my-quarto-website",
+    "title": "Lawrence Lin",
+    "section": "Live Demo — My Quarto Website",
+    "text": "Live Demo — My Quarto Website\n\n03 / LIVE DEMO\n\n\n\n\n\n\npublic.tableau.com/views/USRailwayEducationFinalVersion/Dashboard"
+  },
+  {
+    "objectID": "presentation (1).html#key-takeaways",
+    "href": "presentation (1).html#key-takeaways",
+    "title": "Lawrence Lin",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\nA portfolio that moves\n\n\nis a portfolio that gets remembered.\n\n\n3 lines of HTML inside a ::: {=html} block is all it takes to turn a static screenshot into a live, interactive dashboard on your Quarto site.\n\n\n✓   Publish your Tableau viz to Tableau Public (free)\n\n\n✓   Grab the embed URL from Share → Embed Code\n\n\n✓   Drop an &lt;iframe&gt; into your .qmd file inside ::: {=html}\n\n\n✓   Run quarto render → push to GitHub Pages"
+  },
+  {
+    "objectID": "presentation (2).html#section",
+    "href": "presentation (2).html#section",
+    "title": "Lawrence Lin",
+    "section": "",
+    "text": "3-Minute Presentation\n\n\nEmbedding a Live Tableau Dashboardinto Your Quarto Website\n\n\nFrom static screenshot → fully interactive analytics\n\n\nQuarto Tableau Public revealjs JavaScript API"
+  },
+  {
+    "objectID": "presentation (2).html#static-image-vs.-dynamic-dashboard",
+    "href": "presentation (2).html#static-image-vs.-dynamic-dashboard",
+    "title": "Lawrence Lin",
+    "section": "Static Image vs. Dynamic Dashboard",
+    "text": "Static Image vs. Dynamic Dashboard\n\n01 / WHY IT MATTERS\n\n\n\n\n🖼️\n\n\nScreenshot (before)\n\n\nFrozen in time. Visitors cannot filter, drill down, or interact. Loses value immediately after publishing.\n\n\n\n\n⚡\n\n\nEmbedded (after)\n\n\nLive data from Tableau Public. Visitors use filters, tooltips, and views — just like inside Tableau.\n\n\n\n\n🎯\n\n\nPortfolio impact\n\n\nShows employers you can ship production-quality analytics, not just static demos."
+  },
+  {
+    "objectID": "presentation (2).html#two-approaches-in-quarto",
+    "href": "presentation (2).html#two-approaches-in-quarto",
+    "title": "Lawrence Lin",
+    "section": "Two Approaches in Quarto",
+    "text": "Two Approaches in Quarto\n\n02 / HOW TO DO IT\n\n\n\n# experience.qmd\n\n::: {=html}\n&lt;iframe\n  src=\"https://public.tableau.com/\n  views/USRailwayEducation\n  FinalVersion/Dashboard?\n  :embed=y&:showVizHome=no\"\n  width=\"100%\" height=\"500px\"\n  frameborder=\"0\"&gt;\n&lt;/iframe&gt;\n:::\n\n✓ Simplest method · works everywhere\n\n\n\n\n\n\n1\n\n\nPublish to Tableau PublicFree. Your viz lives at a public URL with an embed code ready to use.\n\n\n\n\n2\n\n\nCopy the embed URLShare → Embed Code → extract the src URL from the iframe.\n\n\n\n\n3\n\n\nPaste into QuartoWrap in ::: {=html} block. Render — done!\n\n\n\n\n4\n\n\nOptional: Tableau JS APIControl the viz from your page: filter, highlight, listen to events."
+  },
+  {
+    "objectID": "presentation (2).html#live-demo-my-quarto-website",
+    "href": "presentation (2).html#live-demo-my-quarto-website",
+    "title": "Lawrence Lin",
+    "section": "Live Demo — My Quarto Website",
+    "text": "Live Demo — My Quarto Website\n\n03 / LIVE DEMO\n\n\n\n\n\n\npublic.tableau.com/views/USRailwayEducationFinalVersion/Dashboard"
+  },
+  {
+    "objectID": "presentation (2).html#key-takeaways",
+    "href": "presentation (2).html#key-takeaways",
+    "title": "Lawrence Lin",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\nA portfolio that moves\n\n\nis a portfolio that gets remembered.\n\n\n3 lines of HTML inside a ::: {=html} block is all it takes to turn a static screenshot into a live, interactive dashboard on your Quarto site.\n\n\n✓   Publish your Tableau viz to Tableau Public (free)\n\n\n✓   Grab the embed URL from Share → Embed Code\n\n\n✓   Drop an &lt;iframe&gt; into your .qmd file inside ::: {=html}\n\n\n✓   Run quarto render → push to GitHub Pages"
+  },
+  {
+    "objectID": "presentation (3).html#section",
+    "href": "presentation (3).html#section",
+    "title": "Lawrence Lin",
+    "section": "",
+    "text": "3-Minute Presentation\n\n\nEmbedding a Live Tableau Dashboardinto Your Quarto Website\n\n\nFrom static screenshot → fully interactive analytics\n\n\nQuarto Tableau Public revealjs JavaScript API"
+  },
+  {
+    "objectID": "presentation (3).html#static-image-vs.-dynamic-dashboard",
+    "href": "presentation (3).html#static-image-vs.-dynamic-dashboard",
+    "title": "Lawrence Lin",
+    "section": "Static Image vs. Dynamic Dashboard",
+    "text": "Static Image vs. Dynamic Dashboard\n\n01 / WHY IT MATTERS\n\n\n\n\n🖼️\n\n\nScreenshot (before)\n\n\nFrozen in time. Visitors cannot filter, drill down, or interact. Loses value immediately after publishing.\n\n\n\n\n⚡\n\n\nEmbedded (after)\n\n\nLive data from Tableau Public. Visitors use filters, tooltips, and views — just like inside Tableau.\n\n\n\n\n🎯\n\n\nPortfolio impact\n\n\nShows employers you can ship production-quality analytics, not just static demos."
+  },
+  {
+    "objectID": "presentation (3).html#two-approaches-in-quarto",
+    "href": "presentation (3).html#two-approaches-in-quarto",
+    "title": "Lawrence Lin",
+    "section": "Two Approaches in Quarto",
+    "text": "Two Approaches in Quarto\n\n02 / HOW TO DO IT\n\n\n\n# experience.qmd\n\n::: {=html}\n&lt;iframe\n  src=\"https://public.tableau.com/\n  views/USRailwayEducation\n  FinalVersion/Dashboard?\n  :embed=y&:showVizHome=no\"\n  width=\"100%\" height=\"500px\"\n  frameborder=\"0\"&gt;\n&lt;/iframe&gt;\n:::\n\n✓ Simplest method · works everywhere\n\n\n\n\n\n\n\n1\n\n\nPublish to Tableau PublicFree. Your viz lives at a public URL with an embed code ready to use.\n\n\n\n\n2\n\n\nCopy the embed URLShare → Embed Code → extract the src URL from the iframe.\n\n\n\n\n3\n\n\nPaste into QuartoWrap in ::: {=html} block. Render — done!\n\n\n\n\n4\n\n\nOptional: Tableau JS APIControl the viz from your page: filter, highlight, listen to events."
+  },
+  {
+    "objectID": "presentation (3).html#live-demo-my-quarto-website",
+    "href": "presentation (3).html#live-demo-my-quarto-website",
+    "title": "Lawrence Lin",
+    "section": "Live Demo — My Quarto Website",
+    "text": "Live Demo — My Quarto Website\n\n03 / LIVE DEMO\n\n\n\n\n\n\npublic.tableau.com/views/USRailwayEducationFinalVersion/Dashboard"
+  },
+  {
+    "objectID": "presentation (3).html#key-takeaways",
+    "href": "presentation (3).html#key-takeaways",
+    "title": "Lawrence Lin",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\nA portfolio that moves\n\n\nis a portfolio that gets remembered.\n\n\n3 lines of HTML inside a ::: {=html} block is all it takes to turn a static screenshot into a live, interactive dashboard on your Quarto site.\n\n\n✓   Publish your Tableau viz to Tableau Public (free)\n\n\n✓   Grab the embed URL from Share → Embed Code\n\n\n✓   Drop an &lt;iframe&gt; into your .qmd file inside ::: {=html}\n\n\n✓   Run quarto render → push to GitHub Pages"
+  },
+  {
+    "objectID": "presentation (3).html#dashboard-preview",
+    "href": "presentation (3).html#dashboard-preview",
+    "title": "Lawrence Lin",
+    "section": "Dashboard Preview",
+    "text": "Dashboard Preview\nView my Tableau Dashboard"
+  },
+  {
+    "objectID": "presentation (4).html#section",
+    "href": "presentation (4).html#section",
+    "title": "Lawrence Lin",
+    "section": "",
+    "text": "3-Minute Presentation\n\n\nEmbedding a Live Tableau Dashboardinto Your Quarto Website\n\n\nFrom static screenshot → fully interactive analytics\n\n\nQuarto Tableau Public revealjs JavaScript API"
+  },
+  {
+    "objectID": "presentation (4).html#static-image-vs.-dynamic-dashboard",
+    "href": "presentation (4).html#static-image-vs.-dynamic-dashboard",
+    "title": "Lawrence Lin",
+    "section": "Static Image vs. Dynamic Dashboard",
+    "text": "Static Image vs. Dynamic Dashboard\n\n01 / WHY IT MATTERS\n\n\n\n\n🖼️\n\n\nScreenshot (before)\n\n\nFrozen in time. Visitors cannot filter, drill down, or interact. Loses value immediately after publishing.\n\n\n\n\n⚡\n\n\nEmbedded (after)\n\n\nLive data from Tableau Public. Visitors use filters, tooltips, and views — just like inside Tableau.\n\n\n\n\n🎯\n\n\nPortfolio impact\n\n\nShows employers you can ship production-quality analytics, not just static demos."
+  },
+  {
+    "objectID": "presentation (4).html#two-approaches-in-quarto",
+    "href": "presentation (4).html#two-approaches-in-quarto",
+    "title": "Lawrence Lin",
+    "section": "Two Approaches in Quarto",
+    "text": "Two Approaches in Quarto\n\n02 / HOW TO DO IT\n\n\n\n# experience.qmd\n\n::: {=html}\n&lt;iframe\n  src=\"https://public.tableau.com/\n  views/USRailwayEducation\n  FinalVersion/Dashboard?\n  :embed=y&:showVizHome=no\"\n  width=\"100%\" height=\"500px\"\n  frameborder=\"0\"&gt;\n&lt;/iframe&gt;\n:::\n\n✓ Simplest method · works everywhere\n\n\n\n\n\n\n\n1\n\n\nPublish to Tableau PublicFree. Your viz lives at a public URL with an embed code ready to use.\n\n\n\n\n2\n\n\nCopy the embed URLShare → Embed Code → extract the src URL from the iframe.\n\n\n\n\n3\n\n\nPaste into QuartoWrap in ::: {=html} block. Render — done!\n\n\n\n\n4\n\n\nOptional: Tableau JS APIControl the viz from your page: filter, highlight, listen to events."
+  },
+  {
+    "objectID": "presentation (4).html#live-demo-my-quarto-website",
+    "href": "presentation (4).html#live-demo-my-quarto-website",
+    "title": "Lawrence Lin",
+    "section": "Live Demo — My Quarto Website",
+    "text": "Live Demo — My Quarto Website\n\n03 / LIVE DEMO  ·  ↗ View my Tableau Dashboard"
+  },
+  {
+    "objectID": "presentation (4).html#key-takeaways",
+    "href": "presentation (4).html#key-takeaways",
+    "title": "Lawrence Lin",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\nA portfolio that moves\n\n\nis a portfolio that gets remembered.\n\n\n3 lines of HTML inside a ::: {=html} block is all it takes to turn a static screenshot into a live, interactive dashboard on your Quarto site.\n\n\n✓   Publish your Tableau viz to Tableau Public (free)\n\n\n✓   Grab the embed URL from Share → Embed Code\n\n\n✓   Drop an &lt;iframe&gt; into your .qmd file inside ::: {=html}\n\n\n✓   Run quarto render → push to GitHub Pages"
+  },
+  {
+    "objectID": "presentation (5).html#section",
+    "href": "presentation (5).html#section",
+    "title": "Lawrence Lin",
+    "section": "",
+    "text": "Embedding a Live Tableau Dashboardinto Your Quarto Website\n\n\nFrom static screenshot → fully interactive analytics\n\n\nQuarto Tableau Public revealjs"
+  },
+  {
+    "objectID": "presentation (5).html#static-image-vs.-dynamic-dashboard",
+    "href": "presentation (5).html#static-image-vs.-dynamic-dashboard",
+    "title": "Lawrence Lin",
+    "section": "Static Image vs. Dynamic Dashboard",
+    "text": "Static Image vs. Dynamic Dashboard\n\n01 / WHY IT MATTERS\n\n\n\n\n🖼️\n\n\nScreenshot (before)\n\n\nFrozen in time. Visitors cannot filter, drill down, or interact. Loses value immediately after publishing.\n\n\n\n\n⚡\n\n\nEmbedded (after)\n\n\nLive data from Tableau Public. Visitors use filters, tooltips, and views — just like inside Tableau.\n\n\n\n\n🎯\n\n\nPortfolio impact\n\n\nShows employers you can ship production-quality analytics, not just static demos."
+  },
+  {
+    "objectID": "presentation (5).html#two-approaches-in-quarto",
+    "href": "presentation (5).html#two-approaches-in-quarto",
+    "title": "Lawrence Lin",
+    "section": "Two Approaches in Quarto",
+    "text": "Two Approaches in Quarto\n\n02 / HOW TO DO IT\n\n\n\n# experience.qmd\n\n::: {=html}\n&lt;iframe\n  src=\"https://public.tableau.com/\n  views/USRailwayEducation\n  FinalVersion/Dashboard?\n  :embed=y&:showVizHome=no\"\n  width=\"100%\" height=\"500px\"\n  frameborder=\"0\"&gt;\n&lt;/iframe&gt;\n:::\n\n✓ Simplest method · works everywhere\n\n\n\n\n\n\n\n1\n\n\nPublish to Tableau PublicFree. Your viz lives at a public URL with an embed code ready to use.\n\n\n\n\n2\n\n\nCopy the embed URLShare → Embed Code → extract the src URL from the iframe.\n\n\n\n\n3\n\n\nPaste into QuartoWrap in ::: {=html} block. Render — done!\n\n\n\n\n4\n\n\nOptional: Tableau JS APIControl the viz from your page: filter, highlight, listen to events."
+  },
+  {
+    "objectID": "presentation (5).html#live-demo-my-quarto-website",
+    "href": "presentation (5).html#live-demo-my-quarto-website",
+    "title": "Lawrence Lin",
+    "section": "Live Demo — My Quarto Website",
+    "text": "Live Demo — My Quarto Website\n\n03 / LIVE DEMO  ·  ↗ View my Tableau Dashboard"
+  },
+  {
+    "objectID": "presentation (5).html#key-takeaways",
+    "href": "presentation (5).html#key-takeaways",
+    "title": "Lawrence Lin",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\nA portfolio that moves\n\n\nis a portfolio that gets remembered.\n\n\n3 lines of HTML inside a ::: {=html} block is all it takes to turn a static screenshot into a live, interactive dashboard on your Quarto site.\n\n\n✓   Publish your Tableau viz to Tableau Public (free)\n\n\n✓   Grab the embed URL from Share → Embed Code\n\n\n✓   Drop an &lt;iframe&gt; into your .qmd file inside ::: {=html}\n\n\n✓   Run quarto render → push to GitHub Pages"
+  },
+  {
+    "objectID": "projects/Presentation/presentation.html#section",
+    "href": "projects/Presentation/presentation.html#section",
+    "title": "Lawrence Lin",
+    "section": "",
+    "text": "Embedding a Live Tableau Dashboardinto Your Quarto Website\n\n\nFrom static screenshot → fully interactive analytics\n\n\nQuarto Tableau Public revealjs"
+  },
+  {
+    "objectID": "projects/Presentation/presentation.html#static-image-vs.-dynamic-dashboard",
+    "href": "projects/Presentation/presentation.html#static-image-vs.-dynamic-dashboard",
+    "title": "Lawrence Lin",
+    "section": "Static Image vs. Dynamic Dashboard",
+    "text": "Static Image vs. Dynamic Dashboard\n\n01 / WHY IT MATTERS\n\n\n\n\n🖼️\n\n\nScreenshot (before)\n\n\nFrozen in time. Visitors cannot filter, drill down, or interact. Loses value immediately after publishing.\n\n\n\n\n⚡\n\n\nEmbedded (after)\n\n\nLive data from Tableau Public. Visitors use filters, tooltips, and views — just like inside Tableau.\n\n\n\n\n🎯\n\n\nPortfolio impact\n\n\nShows employers you can ship production-quality analytics, not just static demos."
+  },
+  {
+    "objectID": "projects/Presentation/presentation.html#two-approaches-in-quarto",
+    "href": "projects/Presentation/presentation.html#two-approaches-in-quarto",
+    "title": "Lawrence Lin",
+    "section": "Two Approaches in Quarto",
+    "text": "Two Approaches in Quarto\n\n02 / HOW TO DO IT\n\n\n\n# experience.qmd\n\n::: {=html}\n&lt;iframe\n  src=\"https://public.tableau.com/\n  views/USRailwayEducation\n  FinalVersion/Dashboard?\n  :embed=y&:showVizHome=no\"\n  width=\"100%\" height=\"500px\"\n  frameborder=\"0\"&gt;\n&lt;/iframe&gt;\n:::\n\n✓ Simplest method · works everywhere\n\n\n\n\n\n\n\n1\n\n\nPublish to Tableau PublicFree. Your viz lives at a public URL with an embed code ready to use.\n\n\n\n\n2\n\n\nCopy the embed URLShare → Embed Code → extract the src URL from the iframe.\n\n\n\n\n3\n\n\nPaste into QuartoWrap in ::: {=html} block. Render — done!\n\n\n\n\n4\n\n\nOptional: Tableau JS APIControl the viz from your page: filter, highlight, listen to events."
+  },
+  {
+    "objectID": "projects/Presentation/presentation.html#live-demo-my-quarto-website",
+    "href": "projects/Presentation/presentation.html#live-demo-my-quarto-website",
+    "title": "Lawrence Lin",
+    "section": "Live Demo — My Quarto Website",
+    "text": "Live Demo — My Quarto Website\n\n03 / LIVE DEMO  ·  ↗ View my Tableau Dashboard"
+  },
+  {
+    "objectID": "projects/Presentation/presentation.html#key-takeaways",
+    "href": "projects/Presentation/presentation.html#key-takeaways",
+    "title": "Lawrence Lin",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\nA portfolio that moves\n\n\nis a portfolio that gets remembered.\n\n\n3 lines of HTML inside a ::: {=html} block is all it takes to turn a static screenshot into a live, interactive dashboard on your Quarto site.\n\n\n✓   Publish your Tableau viz to Tableau Public (free)\n\n\n✓   Grab the embed URL from Share → Embed Code\n\n\n✓   Drop an &lt;iframe&gt; into your .qmd file inside ::: {=html}\n\n\n✓   Run quarto render → push to GitHub Pages"
   }
 ]
