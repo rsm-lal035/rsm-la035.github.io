@@ -14,126 +14,128 @@ format:
 
 ## {background-color="#0a1628"}
 
-<div style="text-align:left; padding-top: 60px;">
-
-
-<h1 style="font-size:1.8em; line-height:1.2; margin-top:10px;">
-  Embedding a <em style="color:#e8b84b;">Live</em> Tableau Dashboard<br>into Your Quarto Website
+<div style="text-align:left; padding-top: 50px;">
+<h1 style="font-size:1.6em; line-height:1.2; margin-top:10px;">
+  Embed Anything with <em style="color:#e8b84b;">&lt;iframe&gt;</em>
 </h1>
-
-<p style="color:#8892a4; font-style:italic; margin-top:20px;">
-  From static screenshot → fully interactive analytics
+<p style="color:#8892a4; font-style:italic; margin-top:14px; font-size:0.9em;">
+  Embedding interactive content with one simple tag
 </p>
-
-<div style="display:flex; gap:12px; margin-top:40px; flex-wrap:wrap;">
-  <span class="tag">Quarto</span>
-  <span class="tag">Tableau Public</span>
-  <span class="tag">revealjs</span>
+<div style="display:flex; gap:12px; margin-top:36px; flex-wrap:wrap;">
+  <span class="tag">YouTube</span>
+  <span class="tag">Google Maps</span>
+  <span class="tag">Tableau</span>
+  <span class="tag">Jupyter</span>
 </div>
 </div>
 
 ---
 
-## Static Image vs. Dynamic Dashboard {background-color="#0a1628"}
+## One Tag, Endless Possibilities {background-color="#0a1628"}
 
-<p style="color:#2ec4b6; font-size:0.55em; letter-spacing:0.15em;">01 / WHY IT MATTERS</p>
-
-<div style="margin-top: 60px; display:flex; gap:20px; justify-content:center;">
-
-<div class="card" style="width:28%;">
-<div class="card-icon">🖼️</div>
-<div class="card-title">Screenshot (before)</div>
-<div class="card-body">Frozen in time. Visitors cannot filter, drill down, or interact. Loses value immediately after publishing.</div>
-</div>
-
-<div class="card" style="width:28%;">
-<div class="card-icon">⚡</div>
-<div class="card-title">Embedded (after)</div>
-<div class="card-body">Live data from Tableau Public. Visitors use filters, tooltips, and views — just like inside Tableau.</div>
-</div>
-
-<div class="card" style="width:28%;">
-<div class="card-icon">🎯</div>
-<div class="card-title">Portfolio impact</div>
-<div class="card-body">Shows employers you can ship production-quality analytics, not just static demos.</div>
-</div>
-
-</div>
-
----
-
-## Two Approaches in Quarto {background-color="#0a1628"}
-
-<p style="color:#2ec4b6; font-size:0.55em; letter-spacing:0.15em;">02 / HOW TO DO IT</p>
+<p style="color:#2ec4b6; font-size:0.55em; letter-spacing:0.15em;">01 / THE BIG IDEA</p>
 
 :::: {.columns}
 
 ::: {.column width="48%"}
-```html
-# experience.qmd
-
-::: {=html}
-<iframe
-  src="https://public.tableau.com/
-  views/USRailwayEducation
-  FinalVersion/Dashboard?
-  :embed=y&:showVizHome=no"
-  width="100%" height="500px"
-  frameborder="0">
-</iframe>
-:::
-```
-<p style="color:#2ec4b6; font-size:0.5em; margin-top:8px;">✓ Simplest method · works everywhere</p>
+<div style="padding-top:30px;">
+<p style="font-size:0.7em; color:#d0d8f0; line-height:1.6;">
+A static screenshot is frozen. But with one <code style="color:#e8b84b;">&lt;iframe&gt;</code> you can drop <b style="color:#fff;">live, interactive content</b> straight into your slides or website.
+</p>
+<p style="font-size:0.7em; color:#d0d8f0; line-height:1.6; margin-top:14px;">
+Videos, maps, dashboards, notebooks — if it lives on the web, you can embed it.
+</p>
+</div>
 :::
 
 ::: {.column width="4%"}
 :::
 
 ::: {.column width="48%"}
-<div style="display:flex; flex-direction:column; gap:8px; margin-top:0px;">
-
-<div style="display:flex; align-items:flex-start; gap:12px;">
-  <div class="step-num">1</div>
-  <div style="line-height:1.4;"><span style="font-weight:bold; font-size:0.65em; color:#fff;">Publish to Tableau Public</span><br><span class="step-body">Free. Your viz lives at a public URL with an embed code ready to use.</span></div>
-</div>
-
-<div style="display:flex; align-items:flex-start; gap:12px;">
-  <div class="step-num">2</div>
-  <div style="line-height:1.4;"><span style="font-weight:bold; font-size:0.65em; color:#fff;">Copy the embed URL</span><br><span class="step-body">Share → Embed Code → extract the src URL from the iframe.</span></div>
-</div>
-
-<div style="display:flex; align-items:flex-start; gap:12px;">
-  <div class="step-num">3</div>
-  <div style="line-height:1.4;"><span style="font-weight:bold; font-size:0.65em; color:#fff;">Paste into Quarto</span><br><span class="step-body">Wrap in <code>::: {=html}</code> block. Render — done!</span></div>
-</div>
-
-<div style="display:flex; align-items:flex-start; gap:12px;">
-  <div class="step-num">4</div>
-  <div style="line-height:1.4;"><span style="font-weight:bold; font-size:0.65em; color:#fff;">Optional: Tableau JS API</span><br><span class="step-body">Control the viz from your page: filter, highlight, listen to events.</span></div>
-</div>
-
-</div>
+```html
+::: {=html}
+<iframe
+  src="PASTE_ANY_URL_HERE"
+  width="100%"
+  height="500px"
+  frameborder="0"
+  allowfullscreen>
+</iframe>
+:::
+```
+<p style="color:#2ec4b6; font-size:0.5em; margin-top:8px;">✓ Same pattern works for everything</p>
 :::
 
 ::::
 
 ---
 
-## Live Demo — My Quarto Website {background-color="#0a1628" .scrollable}
+## Example 1 — YouTube Video {background-color="#0a1628"}
+
+<p style="color:#2ec4b6; font-size:0.48em; letter-spacing:0.15em; margin-bottom:8px;">
+  02 / LIVE DEMO &nbsp;·&nbsp; <code style="color:#e8b84b;">youtube.com/embed/VIDEO_ID</code>
+</p>
+
+::: {=html}
+<iframe
+  src="https://www.youtube.com/embed/_f3latmOhew"
+  style="width:100%; height:70vh; border:1px solid rgba(46,196,182,0.3); border-radius:8px;"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
+:::
+
+---
+
+## Example 2 — Google Maps {background-color="#0a1628"}
+
+<p style="color:#2ec4b6; font-size:0.48em; letter-spacing:0.15em; margin-bottom:8px;">
+  03 / LIVE DEMO &nbsp;·&nbsp; <code style="color:#e8b84b;">maps.google.com/maps?q=…&output=embed</code>
+</p>
+
+::: {=html}
+<iframe
+  src="https://maps.google.com/maps?q=UC+San+Diego&z=14&output=embed"
+  style="width:100%; height:70vh; border:1px solid rgba(46,196,182,0.3); border-radius:8px;"
+  frameborder="0"
+  allowfullscreen>
+</iframe>
+:::
+
+---
+
+## Example 3 — Tableau Dashboard {background-color="#0a1628" .scrollable}
 
 <p style="color:#2ec4b6; font-size:0.48em; letter-spacing:0.15em; margin-bottom:4px;">
-  03 / LIVE DEMO &nbsp;·&nbsp;
-  <a href="https://public.tableau.com/app/profile/chi.yen.lin/viz/USRailwayEducationFinalVersion/Dashboard" target="_blank" style="color:#e8b84b; text-decoration:none;">↗ View my Tableau Dashboard</a>
+  04 / LIVE DEMO &nbsp;·&nbsp;
+  <a href="https://public.tableau.com/app/profile/chi.yen.lin/viz/USRailwayEducationFinalVersion/Dashboard" target="_blank" style="color:#e8b84b; text-decoration:none;">↗ View on Tableau Public</a>
 </p>
 
 ::: {=html}
 <iframe
   src="https://public.tableau.com/views/USRailwayEducationFinalVersion/Dashboard?:showVizHome=no"
-  width="100%"
-  height="700"
+  style="width:100%; height:80vh; border:1px solid rgba(46,196,182,0.3); border-radius:8px;"
   frameborder="0"
-  allowfullscreen
-  style="border-radius:8px; border:1px solid rgba(46,196,182,0.3);">
+  allowfullscreen>
+</iframe>
+:::
+
+---
+
+## Example 4 — Live Jupyter Notebook {background-color="#0a1628" .scrollable}
+
+<p style="color:#2ec4b6; font-size:0.48em; letter-spacing:0.15em; margin-bottom:8px;">
+  05 / LIVE DEMO &nbsp;·&nbsp; JupyterLite runs <b style="color:#fff;">entirely in the browser</b> — audience can edit &amp; run code live &nbsp;
+  <a href="https://colab.research.google.com/" target="_blank" style="color:#e8b84b; text-decoration:none;">↗ Open in Colab</a>
+</p>
+
+::: {=html}
+<iframe
+  src="https://jupyter.org/try-jupyter/lab/index.html"
+  style="width:100%; height:74vh; border:1px solid rgba(46,196,182,0.3); border-radius:8px; background:#fff;"
+  frameborder="0"
+  allowfullscreen>
 </iframe>
 :::
 
@@ -141,14 +143,13 @@ format:
 
 ## Key Takeaways {background-color="#0a1628"}
 
-<h2 style="font-size:1.4em; margin-bottom:0;">A portfolio that <em style="color:#e8b84b;">moves</em></h2>
-<h2 style="font-size:1.4em; color:#e8b84b; font-style:italic; margin-top:4px;">is a portfolio that gets remembered.</h2>
+<h2 style="font-size:1.35em; margin-bottom:0;">One tag. <em style="color:#e8b84b;">Endless</em> possibilities.</h2>
 
 <div class="highlight-box">
-  3 lines of HTML inside a <code>::: {=html}</code> block is all it takes to turn a static screenshot into a live, interactive dashboard on your Quarto site.
+  Anything that lives at a URL — a video, a map, a dashboard, a notebook — can be embedded with a single <code>&lt;iframe&gt;</code> inside a <code>::: {=html}</code> block.
 </div>
 
-<div class="check-item">✓ &nbsp; Publish your Tableau viz to Tableau Public (free)</div>
-<div class="check-item">✓ &nbsp; Grab the embed URL from Share → Embed Code</div>
-<div class="check-item">✓ &nbsp; Drop an <code>&lt;iframe&gt;</code> into your <code>.qmd</code> file inside <code>::: {=html}</code></div>
-<div class="check-item">✓ &nbsp; Run <code>quarto render</code> → push to GitHub Pages</div>
+<div class="check-item">✓ &nbsp; Find the content's embed URL (Share → Embed)</div>
+<div class="check-item">✓ &nbsp; Drop it into an <code>&lt;iframe&gt;</code> in your <code>.qmd</code> file</div>
+<div class="check-item">✓ &nbsp; Set <code>width</code> / <code>height</code>, then <code>quarto render</code></div>
+<div class="check-item">✓ &nbsp; Your slides &amp; site become interactive, not static</div>

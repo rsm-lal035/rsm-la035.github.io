@@ -25,7 +25,7 @@
     "href": "projects.html",
     "title": "My Projects",
     "section": "",
-    "text": "A/B Testing a Call to Action\n\n\n\n\n\n\nLawrence Lin\n\n\nMay 28, 2026\n\n\n\n\n\n\n\n\n\n\n\nMaxDiff Analysis of MSBA Class Preferences\n\n\n\n\n\n\nLawrence Lin\n\n\nMay 28, 2026\n\n\n\n\n\n\n\n\n\n\n\nPoisson Regression and Maximum Likelihood Estimation\n\n\n\n\n\n\nLawrence Lin\n\n\nMay 28, 2026\n\n\n\n\n\n\n\n\n\n\n\nReplication of Karlan and List (2007)\n\n\n\n\n\n\nLawrence Lin\n\n\nMay 28, 2026\n\n\n\n\n\n\n\n\n\n\n\nStatic Image vs. Dynamic Dashboard\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "A/B Testing a Call to Action\n\n\n\n\n\n\nLawrence Lin\n\n\nMay 29, 2026\n\n\n\n\n\n\n\n\n\n\n\nMaxDiff Analysis of MSBA Class Preferences\n\n\n\n\n\n\nLawrence Lin\n\n\nMay 29, 2026\n\n\n\n\n\n\n\n\n\n\n\nOne Tag, Endless Possibilities\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPoisson Regression and Maximum Likelihood Estimation\n\n\n\n\n\n\nLawrence Lin\n\n\nMay 29, 2026\n\n\n\n\n\n\n\n\n\n\n\nReplication of Karlan and List (2007)\n\n\n\n\n\n\nLawrence Lin\n\n\nMay 29, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -627,7 +627,7 @@
     "href": "projects/Presentation/presentation.html#section",
     "title": "Lawrence Lin",
     "section": "",
-    "text": "Embedding a Live Tableau Dashboardinto Your Quarto Website\n\n\nFrom static screenshot → fully interactive analytics\n\n\nQuarto Tableau Public revealjs"
+    "text": "Embed Anything with &lt;iframe&gt;\n\n\nEmbedding interactive content with one simple tag\n\n\nYouTube Google Maps Tableau Jupyter"
   },
   {
     "objectID": "projects/Presentation/presentation.html#static-image-vs.-dynamic-dashboard",
@@ -655,6 +655,265 @@
     "href": "projects/Presentation/presentation.html#key-takeaways",
     "title": "Lawrence Lin",
     "section": "Key Takeaways",
-    "text": "Key Takeaways\n\nA portfolio that moves\n\n\nis a portfolio that gets remembered.\n\n\n3 lines of HTML inside a ::: {=html} block is all it takes to turn a static screenshot into a live, interactive dashboard on your Quarto site.\n\n\n✓   Publish your Tableau viz to Tableau Public (free)\n\n\n✓   Grab the embed URL from Share → Embed Code\n\n\n✓   Drop an &lt;iframe&gt; into your .qmd file inside ::: {=html}\n\n\n✓   Run quarto render → push to GitHub Pages"
+    "text": "Key Takeaways\n\nOne tag. Endless possibilities.\n\n\nAnything that lives at a URL — a video, a map, a dashboard, a notebook — can be embedded with a single &lt;iframe&gt; inside a ::: {=html} block.\n\n\n✓   Find the content’s embed URL (Share → Embed)\n\n\n✓   Drop it into an &lt;iframe&gt; in your .qmd file\n\n\n✓   Set width / height, then quarto render\n\n\n✓   Your slides & site become interactive, not static"
+  },
+  {
+    "objectID": "projects/Presentation/presentation.html#one-tag-endless-possibilities",
+    "href": "projects/Presentation/presentation.html#one-tag-endless-possibilities",
+    "title": "Lawrence Lin",
+    "section": "One Tag, Endless Possibilities",
+    "text": "One Tag, Endless Possibilities\n\n01 / THE BIG IDEA\n\n\n\n\n\nA static screenshot is frozen. But with one &lt;iframe&gt; you can drop live, interactive content straight into your slides or website.\n\n\nVideos, maps, dashboards, notebooks — if it lives on the web, you can embed it.\n\n\n\n\n\n::: {=html}\n&lt;iframe\n  src=\"PASTE_ANY_URL_HERE\"\n  width=\"100%\"\n  height=\"500px\"\n  frameborder=\"0\"\n  allowfullscreen&gt;\n&lt;/iframe&gt;\n:::\n\n✓ Same pattern works for everything"
+  },
+  {
+    "objectID": "projects/Presentation/presentation.html#example-1-tableau-dashboard",
+    "href": "projects/Presentation/presentation.html#example-1-tableau-dashboard",
+    "title": "Lawrence Lin",
+    "section": "Example 1 — Tableau Dashboard",
+    "text": "Example 1 — Tableau Dashboard\n\n02 / LIVE DEMO  ·  ↗ View on Tableau Public"
+  },
+  {
+    "objectID": "projects/Presentation/presentation.html#example-2-youtube-video",
+    "href": "projects/Presentation/presentation.html#example-2-youtube-video",
+    "title": "Lawrence Lin",
+    "section": "Example 2 — YouTube Video",
+    "text": "Example 2 — YouTube Video\n\n03 / LIVE DEMO  ·  youtube.com/embed/VIDEO_ID"
+  },
+  {
+    "objectID": "projects/Presentation/presentation.html#example-3-google-maps",
+    "href": "projects/Presentation/presentation.html#example-3-google-maps",
+    "title": "Lawrence Lin",
+    "section": "Example 3 — Google Maps",
+    "text": "Example 3 — Google Maps\n\n04 / LIVE DEMO  ·  maps.google.com/maps?q=…&output=embed"
+  },
+  {
+    "objectID": "projects/Presentation/presentation (7).html",
+    "href": "projects/Presentation/presentation (7).html",
+    "title": "\nEmbed Anything with <iframe>\n",
+    "section": "",
+    "text": "3-Minute Presentation\n\n\n\nEmbedding interactive content with one simple tag: &lt;iframe&gt;\n\n\nTableau YouTube Google Maps …and almost anything"
+  },
+  {
+    "objectID": "projects/Presentation/presentation (7).html#section",
+    "href": "projects/Presentation/presentation (7).html#section",
+    "title": "Lawrence Lin",
+    "section": "",
+    "text": "3-Minute Presentation\n\n\nEmbed Anything with &lt;iframe&gt;\n\n\nEmbedding interactive content with one simple tag: &lt;iframe&gt;\n\n\nTableau YouTube Google Maps …and almost anything"
+  },
+  {
+    "objectID": "projects/Presentation/presentation (7).html#one-tag-endless-possibilities",
+    "href": "projects/Presentation/presentation (7).html#one-tag-endless-possibilities",
+    "title": "Lawrence Lin",
+    "section": "One Tag, Endless Possibilities",
+    "text": "One Tag, Endless Possibilities\n\n01 / THE BIG IDEA\n\n\n\n\n\nA static screenshot is frozen. But with one &lt;iframe&gt; you can drop live, interactive content straight into your slides or website.\n\n\nDashboards, videos, maps, forms, music — if it lives on the web, you can embed it.\n\n\n\n\n\n::: {=html}\n&lt;iframe\n  src=\"PASTE_ANY_URL_HERE\"\n  width=\"100%\"\n  height=\"500px\"\n  frameborder=\"0\"\n  allowfullscreen&gt;\n&lt;/iframe&gt;\n:::\n\n✓ Same pattern works for everything"
+  },
+  {
+    "objectID": "projects/Presentation/presentation (7).html#example-1-tableau-dashboard",
+    "href": "projects/Presentation/presentation (7).html#example-1-tableau-dashboard",
+    "title": "Lawrence Lin",
+    "section": "Example 1 — Tableau Dashboard",
+    "text": "Example 1 — Tableau Dashboard\n\n02 / LIVE DEMO  ·  ↗ View on Tableau Public"
+  },
+  {
+    "objectID": "projects/Presentation/presentation (7).html#example-2-youtube-video",
+    "href": "projects/Presentation/presentation (7).html#example-2-youtube-video",
+    "title": "Lawrence Lin",
+    "section": "Example 2 — YouTube Video",
+    "text": "Example 2 — YouTube Video\n\n03 / LIVE DEMO  ·  youtube.com/embed/VIDEO_ID"
+  },
+  {
+    "objectID": "projects/Presentation/presentation (7).html#example-3-google-maps",
+    "href": "projects/Presentation/presentation (7).html#example-3-google-maps",
+    "title": "Lawrence Lin",
+    "section": "Example 3 — Google Maps",
+    "text": "Example 3 — Google Maps\n\n04 / LIVE DEMO  ·  maps.google.com/maps?q=…&output=embed"
+  },
+  {
+    "objectID": "projects/Presentation/presentation (7).html#key-takeaways",
+    "href": "projects/Presentation/presentation (7).html#key-takeaways",
+    "title": "Lawrence Lin",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\nOne tag. Endless possibilities.\n\n\nAnything that lives at a URL — a dashboard, a video, a map, a form — can be embedded with a single &lt;iframe&gt; inside a ::: {=html} block.\n\n\n✓   Find the content’s embed URL (Share → Embed)\n\n\n✓   Drop it into an &lt;iframe&gt; in your .qmd file\n\n\n✓   Set width / height, then quarto render\n\n\n✓   Your slides & site become interactive, not static"
+  },
+  {
+    "objectID": "projects/Presentation/presentation.html#example-3-interactive-chart",
+    "href": "projects/Presentation/presentation.html#example-3-interactive-chart",
+    "title": "Lawrence Lin",
+    "section": "Example 3 — Interactive Chart",
+    "text": "Example 3 — Interactive Chart\n\n04 / LIVE DEMO  ·  Observable · live D3 / Plotly — zoom & hover, no screenshot"
+  },
+  {
+    "objectID": "projects/Presentation/presentation .html#section",
+    "href": "projects/Presentation/presentation .html#section",
+    "title": "Lawrence Lin",
+    "section": "",
+    "text": "3-Minute Presentation\n\n\nEmbed Anything with &lt;iframe&gt;\n\n\nEmbedding interactive content with one simple tag: &lt;iframe&gt;\n\n\nTableau 3D Models Live Jupyter …and almost anything"
+  },
+  {
+    "objectID": "projects/Presentation/presentation .html#one-tag-endless-possibilities",
+    "href": "projects/Presentation/presentation .html#one-tag-endless-possibilities",
+    "title": "Lawrence Lin",
+    "section": "One Tag, Endless Possibilities",
+    "text": "One Tag, Endless Possibilities\n\n01 / THE BIG IDEA\n\n\n\n\n\nA static screenshot is frozen. But with one &lt;iframe&gt; you can drop live, interactive content straight into your slides or website.\n\n\nDashboards, videos, maps, forms, music — if it lives on the web, you can embed it.\n\n\n\n\n\n::: {=html}\n&lt;iframe\n  src=\"PASTE_ANY_URL_HERE\"\n  width=\"100%\"\n  height=\"500px\"\n  frameborder=\"0\"\n  allowfullscreen&gt;\n&lt;/iframe&gt;\n:::\n\n✓ Same pattern works for everything"
+  },
+  {
+    "objectID": "projects/Presentation/presentation .html#example-1-tableau-dashboard",
+    "href": "projects/Presentation/presentation .html#example-1-tableau-dashboard",
+    "title": "Lawrence Lin",
+    "section": "Example 1 — Tableau Dashboard",
+    "text": "Example 1 — Tableau Dashboard\n\n02 / LIVE DEMO  ·  ↗ View on Tableau Public"
+  },
+  {
+    "objectID": "projects/Presentation/presentation .html#example-2-youtube-video",
+    "href": "projects/Presentation/presentation .html#example-2-youtube-video",
+    "title": "Lawrence Lin",
+    "section": "Example 2 — YouTube Video",
+    "text": "Example 2 — YouTube Video\n\n03 / LIVE DEMO  ·  youtube.com/embed/VIDEO_ID"
+  },
+  {
+    "objectID": "projects/Presentation/presentation .html#example-3-jupyter-colab-notebook",
+    "href": "projects/Presentation/presentation .html#example-3-jupyter-colab-notebook",
+    "title": "Lawrence Lin",
+    "section": "Example 3 — Jupyter / Colab Notebook",
+    "text": "Example 3 — Jupyter / Colab Notebook\n\n04 / LIVE DEMO  ·  audience sees the code + output, and can fork it to run   ↗ Open in Colab"
+  },
+  {
+    "objectID": "projects/Presentation/presentation .html#key-takeaways",
+    "href": "projects/Presentation/presentation .html#key-takeaways",
+    "title": "Lawrence Lin",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\nOne tag. Endless possibilities.\n\n\nAnything that lives at a URL — a dashboard, a video, a map, a form — can be embedded with a single &lt;iframe&gt; inside a ::: {=html} block.\n\n\n✓   Find the content’s embed URL (Share → Embed)\n\n\n✓   Drop it into an &lt;iframe&gt; in your .qmd file\n\n\n✓   Set width / height, then quarto render\n\n\n✓   Your slides & site become interactive, not static"
+  },
+  {
+    "objectID": "projects/Presentation/presentation (10).html#section",
+    "href": "projects/Presentation/presentation (10).html#section",
+    "title": "Lawrence Lin",
+    "section": "",
+    "text": "Embed Anything with &lt;iframe&gt;\n\n\nEmbedding interactive content with one simple tag: &lt;iframe&gt;\n\n\nTableau YouTube Live Jupyter …and almost anything"
+  },
+  {
+    "objectID": "projects/Presentation/presentation (10).html#one-tag-endless-possibilities",
+    "href": "projects/Presentation/presentation (10).html#one-tag-endless-possibilities",
+    "title": "Lawrence Lin",
+    "section": "One Tag, Endless Possibilities",
+    "text": "One Tag, Endless Possibilities\n\n01 / THE BIG IDEA\n\n\n\n\n\nA static screenshot is frozen. But with one &lt;iframe&gt; you can drop live, interactive content straight into your slides or website.\n\n\nDashboards, videos, maps, forms, music — if it lives on the web, you can embed it.\n\n\n\n\n\n::: {=html}\n&lt;iframe\n  src=\"PASTE_ANY_URL_HERE\"\n  width=\"100%\"\n  height=\"500px\"\n  frameborder=\"0\"\n  allowfullscreen&gt;\n&lt;/iframe&gt;\n:::\n\n✓ Same pattern works for everything"
+  },
+  {
+    "objectID": "projects/Presentation/presentation (10).html#example-1-tableau-dashboard",
+    "href": "projects/Presentation/presentation (10).html#example-1-tableau-dashboard",
+    "title": "Lawrence Lin",
+    "section": "Example 1 — Tableau Dashboard",
+    "text": "Example 1 — Tableau Dashboard\n\n02 / LIVE DEMO  ·  ↗ View on Tableau Public"
+  },
+  {
+    "objectID": "projects/Presentation/presentation (10).html#example-2-youtube-video",
+    "href": "projects/Presentation/presentation (10).html#example-2-youtube-video",
+    "title": "Lawrence Lin",
+    "section": "Example 2 — YouTube Video",
+    "text": "Example 2 — YouTube Video\n\n03 / LIVE DEMO  ·  youtube.com/embed/VIDEO_ID"
+  },
+  {
+    "objectID": "projects/Presentation/presentation (10).html#example-3-live-jupyter-notebook",
+    "href": "projects/Presentation/presentation (10).html#example-3-live-jupyter-notebook",
+    "title": "Lawrence Lin",
+    "section": "Example 3 — Live Jupyter Notebook",
+    "text": "Example 3 — Live Jupyter Notebook\n\n04 / LIVE DEMO  ·  JupyterLite runs entirely in the browser — audience can edit & run code live   ↗ Open in Colab"
+  },
+  {
+    "objectID": "projects/Presentation/presentation (10).html#key-takeaways",
+    "href": "projects/Presentation/presentation (10).html#key-takeaways",
+    "title": "Lawrence Lin",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\nOne tag. Endless possibilities.\n\n\nAnything that lives at a URL — a dashboard, a video, a map, a form — can be embedded with a single &lt;iframe&gt; inside a ::: {=html} block.\n\n\n✓   Find the content’s embed URL (Share → Embed)\n\n\n✓   Drop it into an &lt;iframe&gt; in your .qmd file\n\n\n✓   Set width / height, then quarto render\n\n\n✓   Your slides & site become interactive, not static"
+  },
+  {
+    "objectID": "projects/Presentation/presentation.html#example-3-live-jupyter-notebook",
+    "href": "projects/Presentation/presentation.html#example-3-live-jupyter-notebook",
+    "title": "Lawrence Lin",
+    "section": "Example 3 — Live Jupyter Notebook",
+    "text": "Example 3 — Live Jupyter Notebook\n\n04 / LIVE DEMO  ·  JupyterLite runs entirely in the browser — audience can edit & run code live   ↗ Open in Colab"
+  },
+  {
+    "objectID": "projects/Presentation/presentation .html#example-2-interactive-3d-model",
+    "href": "projects/Presentation/presentation .html#example-2-interactive-3d-model",
+    "title": "Lawrence Lin",
+    "section": "Example 2 — Interactive 3D Model",
+    "text": "Example 2 — Interactive 3D Model\n\n03 / LIVE DEMO  ·  Sketchfab — drag to rotate, scroll to zoom, fully interactive"
+  },
+  {
+    "objectID": "projects/Presentation/presentation .html#example-3-live-jupyter-notebook",
+    "href": "projects/Presentation/presentation .html#example-3-live-jupyter-notebook",
+    "title": "Lawrence Lin",
+    "section": "Example 3 — Live Jupyter Notebook",
+    "text": "Example 3 — Live Jupyter Notebook\n\n04 / LIVE DEMO  ·  JupyterLite runs entirely in the browser — audience can edit & run code live   ↗ Open in Colab"
+  },
+  {
+    "objectID": "projects/Presentation/presentation (13).html#section",
+    "href": "projects/Presentation/presentation (13).html#section",
+    "title": "Lawrence Lin",
+    "section": "",
+    "text": "3-Minute Presentation\n\n\nEmbed Anything with &lt;iframe&gt;\n\n\nEmbedding interactive content with one simple tag: &lt;iframe&gt;\n\n\nTableau 3D Models Live Jupyter …and almost anything"
+  },
+  {
+    "objectID": "projects/Presentation/presentation (13).html#one-tag-endless-possibilities",
+    "href": "projects/Presentation/presentation (13).html#one-tag-endless-possibilities",
+    "title": "Lawrence Lin",
+    "section": "One Tag, Endless Possibilities",
+    "text": "One Tag, Endless Possibilities\n\n01 / THE BIG IDEA\n\n\n\n\n\nA static screenshot is frozen. But with one &lt;iframe&gt; you can drop live, interactive content straight into your slides or website.\n\n\nDashboards, videos, maps, forms, music — if it lives on the web, you can embed it.\n\n\n\n\n\n::: {=html}\n&lt;iframe\n  src=\"PASTE_ANY_URL_HERE\"\n  width=\"100%\"\n  height=\"500px\"\n  frameborder=\"0\"\n  allowfullscreen&gt;\n&lt;/iframe&gt;\n:::\n\n✓ Same pattern works for everything"
+  },
+  {
+    "objectID": "projects/Presentation/presentation (13).html#example-1-tableau-dashboard",
+    "href": "projects/Presentation/presentation (13).html#example-1-tableau-dashboard",
+    "title": "Lawrence Lin",
+    "section": "Example 1 — Tableau Dashboard",
+    "text": "Example 1 — Tableau Dashboard\n\n02 / LIVE DEMO  ·  ↗ View on Tableau Public"
+  },
+  {
+    "objectID": "projects/Presentation/presentation (13).html#example-2-interactive-3d-model",
+    "href": "projects/Presentation/presentation (13).html#example-2-interactive-3d-model",
+    "title": "Lawrence Lin",
+    "section": "Example 2 — Interactive 3D Model",
+    "text": "Example 2 — Interactive 3D Model\n\n03 / LIVE DEMO  ·  Sketchfab — drag to rotate, scroll to zoom, fully interactive"
+  },
+  {
+    "objectID": "projects/Presentation/presentation (13).html#example-3-live-jupyter-notebook",
+    "href": "projects/Presentation/presentation (13).html#example-3-live-jupyter-notebook",
+    "title": "Lawrence Lin",
+    "section": "Example 3 — Live Jupyter Notebook",
+    "text": "Example 3 — Live Jupyter Notebook\n\n04 / LIVE DEMO  ·  JupyterLite runs entirely in the browser — audience can edit & run code live   ↗ Open in Colab"
+  },
+  {
+    "objectID": "projects/Presentation/presentation (13).html#key-takeaways",
+    "href": "projects/Presentation/presentation (13).html#key-takeaways",
+    "title": "Lawrence Lin",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\nOne tag. Endless possibilities.\n\n\nAnything that lives at a URL — a dashboard, a video, a map, a form — can be embedded with a single &lt;iframe&gt; inside a ::: {=html} block.\n\n\n✓   Find the content’s embed URL (Share → Embed)\n\n\n✓   Drop it into an &lt;iframe&gt; in your .qmd file\n\n\n✓   Set width / height, then quarto render\n\n\n✓   Your slides & site become interactive, not static"
+  },
+  {
+    "objectID": "projects/Presentation/presentation.html#example-1-youtube-video",
+    "href": "projects/Presentation/presentation.html#example-1-youtube-video",
+    "title": "Lawrence Lin",
+    "section": "Example 1 — YouTube Video",
+    "text": "Example 1 — YouTube Video\n\n02 / LIVE DEMO  ·  youtube.com/embed/VIDEO_ID"
+  },
+  {
+    "objectID": "projects/Presentation/presentation.html#example-2-google-maps",
+    "href": "projects/Presentation/presentation.html#example-2-google-maps",
+    "title": "Lawrence Lin",
+    "section": "Example 2 — Google Maps",
+    "text": "Example 2 — Google Maps\n\n03 / LIVE DEMO  ·  maps.google.com/maps?q=…&output=embed"
+  },
+  {
+    "objectID": "projects/Presentation/presentation.html#example-3-tableau-dashboard",
+    "href": "projects/Presentation/presentation.html#example-3-tableau-dashboard",
+    "title": "Lawrence Lin",
+    "section": "Example 3 — Tableau Dashboard",
+    "text": "Example 3 — Tableau Dashboard\n\n04 / LIVE DEMO  ·  ↗ View on Tableau Public"
+  },
+  {
+    "objectID": "projects/Presentation/presentation.html#example-4-live-jupyter-notebook",
+    "href": "projects/Presentation/presentation.html#example-4-live-jupyter-notebook",
+    "title": "Lawrence Lin",
+    "section": "Example 4 — Live Jupyter Notebook",
+    "text": "Example 4 — Live Jupyter Notebook\n\n05 / LIVE DEMO  ·  JupyterLite runs entirely in the browser — audience can edit & run code live   ↗ Open in Colab"
   }
 ]
