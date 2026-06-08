@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Lawrence Lin">
+<meta name="dcterms.date" content="2026-06-08">
 
-<title>My Projects – Lawrence Lin</title>
+<title>Key Drivers Analysis – Lawrence Lin</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +25,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ac077c1e730dfeb5e42400639d17284e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-89ba6b723c0026cab07b5b492f14f291.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ac077c1e730dfeb5e42400639d17284e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-89ba6b723c0026cab07b5b492f14f291.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,35 +70,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -130,7 +104,7 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -140,7 +114,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Lawrence Lin</span>
     </a>
   </div>
@@ -151,19 +125,19 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./resume.html"> 
+    <a class="nav-link" href="../../resume.html"> 
 <span class="menu-text">Resume</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./projects.html" aria-current="page"> 
+    <a class="nav-link" href="../../projects.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Experience.html"> 
+    <a class="nav-link" href="../../Experience.html"> 
 <span class="menu-text">Experience</span></a>
   </li>  
 </ul>
@@ -177,22 +151,50 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
+  <li><a href="#visualizing-the-drivers" id="toc-visualizing-the-drivers" class="nav-link" data-scroll-target="#visualizing-the-drivers">Visualizing the Drivers</a>
+  <ul class="collapse">
+  <li><a href="#which-attributes-matter-most" id="toc-which-attributes-matter-most" class="nav-link" data-scroll-target="#which-attributes-matter-most">Which attributes matter most?</a></li>
+  <li><a href="#do-the-six-metrics-agree" id="toc-do-the-six-metrics-agree" class="nav-link" data-scroll-target="#do-the-six-metrics-agree">Do the six metrics agree?</a></li>
+  <li><a href="#bivariate-vs.-partial-importance" id="toc-bivariate-vs.-partial-importance" class="nav-link" data-scroll-target="#bivariate-vs.-partial-importance">Bivariate vs.&nbsp;partial importance</a></li>
+  <li><a href="#how-the-drivers-relate-to-one-another" id="toc-how-the-drivers-relate-to-one-another" class="nav-link" data-scroll-target="#how-the-drivers-relate-to-one-another">How the drivers relate to one another</a></li>
+  </ul></li>
+  <li><a href="#bonus-shapley-values-for-a-logistic-model" id="toc-bonus-shapley-values-for-a-logistic-model" class="nav-link" data-scroll-target="#bonus-shapley-values-for-a-logistic-model">Bonus: Shapley Values for a Logistic Model</a></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">My Projects</h1>
+<h1 class="title">Key Drivers Analysis</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Lawrence Lin </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 8, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -202,144 +204,255 @@ window.Quarto = {
 </header>
 
 
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>This post replicates the variable-importance table from slide 75 of the Key Drivers slides. Using customer-satisfaction survey data, I measure how much each of nine perception attributes drives overall <code>satisfaction</code>, using six different importance metrics:</p>
+<ol type="1">
+<li><strong>Pearson correlations</strong> — simple bivariate association with the outcome.</li>
+<li><strong>Standardized regression coefficients</strong> — partial effect, controlling for other drivers.</li>
+<li><strong>Usefulness (drop-one)</strong> — the drop in <span class="math inline">\(R^2\)</span> when a variable is removed from the full model.</li>
+<li><strong>Shapley values</strong> — average marginal <span class="math inline">\(R^2\)</span> contribution across all variable orderings (own implementation).</li>
+<li><strong>Johnson’s relative weights</strong> — an approximation that partitions <span class="math inline">\(R^2\)</span> among correlated predictors.</li>
+<li><strong>Mean decrease in Gini (Random Forest)</strong> — impurity-based importance from a random forest.</li>
+</ol>
+<p>The polychoric correlations are omitted, as permitted by the assignment.</p>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<div class="cell" data-execution_count="2">
+<div id="tbl-main" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="2">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-main-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1
+</figcaption>
+<div aria-describedby="tbl-main-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display" data-execution_count="2">
+<div>
 
 
+<table class="dataframe do-not-create-environment caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Pearson Corr.</th>
+<th data-quarto-table-cell-role="th">Std. Coef.</th>
+<th data-quarto-table-cell-role="th">Usefulness</th>
+<th data-quarto-table-cell-role="th">Shapley</th>
+<th data-quarto-table-cell-role="th">Johnson's RW</th>
+<th data-quarto-table-cell-role="th">RF Gini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">trust</th>
+<td>0.256</td>
+<td>0.116</td>
+<td>0.008</td>
+<td>0.022</td>
+<td>0.022</td>
+<td>0.152</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">build</th>
+<td>0.192</td>
+<td>0.020</td>
+<td>0.000</td>
+<td>0.007</td>
+<td>0.007</td>
+<td>0.100</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">differs</th>
+<td>0.185</td>
+<td>0.028</td>
+<td>0.001</td>
+<td>0.007</td>
+<td>0.008</td>
+<td>0.090</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">easy</th>
+<td>0.213</td>
+<td>0.022</td>
+<td>0.000</td>
+<td>0.009</td>
+<td>0.009</td>
+<td>0.097</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">appealing</th>
+<td>0.208</td>
+<td>0.034</td>
+<td>0.001</td>
+<td>0.009</td>
+<td>0.009</td>
+<td>0.085</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">rewarding</th>
+<td>0.195</td>
+<td>0.005</td>
+<td>0.000</td>
+<td>0.007</td>
+<td>0.007</td>
+<td>0.105</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">popular</th>
+<td>0.171</td>
+<td>0.017</td>
+<td>0.000</td>
+<td>0.006</td>
+<td>0.006</td>
+<td>0.095</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">service</th>
+<td>0.251</td>
+<td>0.088</td>
+<td>0.005</td>
+<td>0.018</td>
+<td>0.018</td>
+<td>0.136</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">impact</th>
+<td>0.255</td>
+<td>0.128</td>
+<td>0.011</td>
+<td>0.024</td>
+<td>0.024</td>
+<td>0.140</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>The Shapley values and Johnson’s relative weights each sum to the full-model <span class="math inline">\(R^2\)</span> of np.float64(0.109), confirming both decompositions are correct.</p>
+</section>
+<section id="visualizing-the-drivers" class="level2">
+<h2 class="anchored" data-anchor-id="visualizing-the-drivers">Visualizing the Drivers</h2>
+<section id="which-attributes-matter-most" class="level3">
+<h3 class="anchored" data-anchor-id="which-attributes-matter-most">Which attributes matter most?</h3>
+<div id="cell-fig-shapley" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+<div id="fig-shapley" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-shapley-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="key_drivers_analysis (2)_files/figure-html/fig-shapley-output-1.png" width="943" height="524" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-shapley-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Drivers ranked by Shapley value (share of explained variance).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><code>Trust</code>, <code>impact</code>, and <code>service</code> stand out as the strongest unique drivers.</p>
+</section>
+<section id="do-the-six-metrics-agree" class="level3">
+<h3 class="anchored" data-anchor-id="do-the-six-metrics-agree">Do the six metrics agree?</h3>
+<div id="cell-fig-heatmap" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div id="fig-heatmap" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-heatmap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="key_drivers_analysis (2)_files/figure-html/fig-heatmap-output-1.png" width="1004" height="585" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-heatmap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Each importance metric, min-max scaled within its column.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><code>Trust</code>, <code>impact</code>, and <code>service</code> stay dark (high) across every method, while <code>popular</code>, <code>build</code>, and <code>rewarding</code> stay light (low). The methods broadly agree.</p>
+</section>
+<section id="bivariate-vs.-partial-importance" class="level3">
+<h3 class="anchored" data-anchor-id="bivariate-vs.-partial-importance">Bivariate vs.&nbsp;partial importance</h3>
+<div id="cell-fig-scatter" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+<div id="fig-scatter" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-scatter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="key_drivers_analysis (2)_files/figure-html/fig-scatter-output-1.png" width="881" height="585" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-scatter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Simple correlation vs.&nbsp;unique Shapley contribution.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Drivers in the upper-right (<code>trust</code>, <code>impact</code>, <code>service</code>) are both strongly correlated and uniquely important.</p>
+</section>
+<section id="how-the-drivers-relate-to-one-another" class="level3">
+<h3 class="anchored" data-anchor-id="how-the-drivers-relate-to-one-another">How the drivers relate to one another</h3>
+<div id="cell-fig-corr" class="cell" data-execution_count="6">
+<div class="cell-output cell-output-display">
+<div id="fig-corr" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-corr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="key_drivers_analysis (2)_files/figure-html/fig-corr-output-1.png" width="816" height="705" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-corr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Pairwise Pearson correlations among the nine drivers.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>The drivers are positively but moderately correlated, which is why the partition methods spread importance more evenly than raw correlations alone would.</p>
+</section>
+</section>
+<section id="bonus-shapley-values-for-a-logistic-model" class="level2">
+<h2 class="anchored" data-anchor-id="bonus-shapley-values-for-a-logistic-model">Bonus: Shapley Values for a Logistic Model</h2>
+<p>The metrics above all treat satisfaction as continuous. As an extra step, I extend the Shapley decomposition to a <strong>logistic regression</strong>, which models a binary outcome — here, whether a customer is <em>highly satisfied</em> (a rating of 4 or 5) versus not. About 51% of customers fall in the highly-satisfied group, so the split is fairly balanced.</p>
+<p>Because a logit has no ordinary <span class="math inline">\(R^2\)</span>, the fit metric becomes <strong>McFadden’s pseudo-<span class="math inline">\(R^2\)</span></strong>, <span class="math inline">\(1 - \ell_{\text{model}} / \ell_{\text{null}}\)</span>, where <span class="math inline">\(\ell\)</span> is the model log-likelihood. The Shapley logic is identical: each driver’s value is its average marginal gain in pseudo-<span class="math inline">\(R^2\)</span> across all <span class="math inline">\(2^9\)</span> subsets of drivers.</p>
+<div id="logit-shapley" class="cell" data-execution_count="7">
+<div class="cell-output cell-output-stdout">
+<pre><code>Sum of logit Shapley values: 0.0770
+Full model pseudo-R^2:       0.0770</code></pre>
+</div>
+</div>
+<p>The values again sum to the full-model pseudo-<span class="math inline">\(R^2\)</span>, confirming the decomposition. The chart compares each driver’s linear Shapley value against its logistic-model counterpart.</p>
+<div id="cell-fig-logit" class="cell" data-execution_count="8">
+<div class="cell-output cell-output-display">
+<div id="fig-logit" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-logit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="key_drivers_analysis (2)_files/figure-html/fig-logit-output-1.png" width="1004" height="561" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-logit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Linear Shapley (R²) vs.&nbsp;logistic Shapley (pseudo-R²).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>The two models produce the same top tier — <code>impact</code>, <code>trust</code>, and <code>service</code> — so the conclusion is robust to whether satisfaction is treated as continuous or as a high/low binary outcome. The pseudo-<span class="math inline">\(R^2\)</span> magnitudes are naturally smaller, since a logit explains a coarser, binary target.</p>
+</section>
+<section id="discussion" class="level2">
+<h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
+<p>The metrics tell a consistent story. <strong><code>Trust</code>, <code>impact</code>, and <code>service</code></strong> rank at the top across essentially every method.</p>
+<ul>
+<li><strong>Bivariate vs.&nbsp;partial importance.</strong> All nine drivers have similar raw Pearson correlations (~0.17–0.26), but the partial metrics spread them out more because the drivers are correlated with one another.</li>
+<li><strong>Shapley and Johnson agree closely.</strong> Both decompose <span class="math inline">\(R^2\)</span> and produce nearly identical rankings.</li>
+<li><strong>Usefulness understates correlated drivers.</strong> Drop-one values are small because removing one correlated predictor barely hurts the model.</li>
+<li><strong>Random forest spreads importance more evenly</strong> but still places <code>trust</code>, <code>impact</code>, and <code>service</code> at the top.</li>
+<li><strong>The ranking survives a change of model.</strong> Decomposing a logistic model on a binary high/low-satisfaction outcome yields the same leading drivers, so the result is not an artifact of treating satisfaction as continuous.</li>
+</ul>
+<p>For management, the takeaway is to prioritize the attributes that drive satisfaction most strongly and uniquely — <strong>trust, impact, and service</strong>.</p>
 
 
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-date-sort="1780876800000" data-listing-file-modified-sort="1777683273057" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3127">
-<a href="./projects/project1/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="projects/project1/index_files/figure-html/cell-3-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-A/B Testing a Call to Action
-</h5>
-<div class="card-text listing-description delink">
-Imagine you run a website with a landing page where visitors can sign up for your newsletter. You might think the wording of the sign-up message is a small detail, but even…
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Lawrence Lin
-</div>
-<div class="listing-date">
-Jun 8, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-date-sort="1780876800000" data-listing-file-modified-sort="1780882177312" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1508">
-<a href="./projects/HW5/hw5_questions.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="projects/HW5/hw5_questions_files/figure-html/fig-shapley-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Key Drivers Analysis
-</h5>
-<div class="card-text listing-description delink">
-This post replicates the variable-importance table from slide 75 of the Key Drivers slides. Using customer-satisfaction survey data, I measure how much each of nine…<code></code>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Lawrence Lin
-</div>
-<div class="listing-date">
-Jun 8, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-date-sort="1780876800000" data-listing-file-modified-sort="1779870156153" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="41" data-listing-word-count-sort="8139">
-<a href="./projects/HW4/hw4_questions.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="projects/HW4/hw4_questions_files/figure-html/counts-analysis-plot-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-MaxDiff Analysis of MSBA Class Preferences
-</h5>
-<div class="card-text listing-description delink">
-MaxDiff, also called Best-Worst Scaling, is a survey method for measuring relative preferences. Instead of asking respondents to rate each item on a numeric scale, the…
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Lawrence Lin
-</div>
-<div class="listing-date">
-Jun 8, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1780653268394" data-listing-reading-time-sort="2" data-listing-word-count-sort="368">
-<a href="./projects/Presentation/Lin_Lawrence-iframe_embeds.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-One Tag, Endless Possibilities
-</h5>
-<div class="card-text listing-description delink">
+</section>
 
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="4" data-listing-date-sort="1780876800000" data-listing-file-modified-sort="1778980647440" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="22" data-listing-word-count-sort="4231">
-<a href="./projects/HW3/hw3_questions.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="projects/HW3/hw3_questions_files/figure-html/cell-4-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Poisson Regression and Maximum Likelihood Estimation
-</h5>
-<div class="card-text listing-description delink">
-Blueprinty is a small software company that builds tools for engineering firms preparing blueprint materials for patent applications. Its marketing team wants to make a…
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Lawrence Lin
-</div>
-<div class="listing-date">
-Jun 8, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="5" data-listing-date-sort="1780876800000" data-listing-file-modified-sort="1778976112342" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="778">
-<a href="./projects/HW2/hw2_questions.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="projects/HW2/hw2_questions_files/figure-html/cell-5-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Replication of Karlan and List (2007)
-</h5>
-<div class="card-text listing-description delink">
-Karlan and List (2007) study whether matching grants increase charitable giving. In their field experiment, prior donors were randomly assigned to receive either a standard…
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Lawrence Lin
-</div>
-<div class="listing-date">
-Jun 8, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

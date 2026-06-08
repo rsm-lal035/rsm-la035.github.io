@@ -1,6 +1,7 @@
 ---
 format:
   revealjs:
+    embed-resources: true
     theme: dark
     transition: fade
     slide-number: true

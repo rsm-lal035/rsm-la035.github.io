@@ -1,0 +1,306 @@
+---
+title: "Key Drivers Analysis"
+author: "Lawrence Lin"
+date: today
+format:
+  html:
+    toc: true
+    echo: false
+    warning: false
+    message: false
+    fig-align: center
+    df-print: kable
+---
+
+## Overview
+
+This post replicates the variable-importance table from slide 75 of the Key Drivers
+slides. Using customer-satisfaction survey data, I measure how much each of nine
+perception attributes drives overall `satisfaction`, using six different importance
+metrics:
+
+1. **Pearson correlations** — simple bivariate association with the outcome.
+2. **Standardized regression coefficients** — partial effect, controlling for other drivers.
+3. **Usefulness (drop-one)** — the drop in $R^2$ when a variable is removed from the full model.
+4. **Shapley values** — average marginal $R^2$ contribution across all variable orderings (own implementation).
+5. **Johnson's relative weights** — an approximation that partitions $R^2$ among correlated predictors.
+6. **Mean decrease in Gini (Random Forest)** — impurity-based importance from a random forest.
+
+The polychoric correlations are omitted, as permitted by the assignment.
+
+```{python}
+#| label: setup
+import pandas as pd
+import numpy as np
+from itertools import combinations
+from math import factorial
+from sklearn.ensemble import RandomForestRegressor
+import statsmodels.api as sm
+import matplotlib.pyplot as plt
+
+plt.rcParams.update({
+    "figure.dpi": 120,
+    "axes.spines.top": False,
+    "axes.spines.right": False,
+    "font.size": 11,
+    "axes.titlesize": 13,
+    "axes.titleweight": "bold",
+})
+
+df = pd.read_csv("data_for_drivers_analysis.csv")
+y_col = "satisfaction"
+X_cols = ["trust", "build", "differs", "easy", "appealing",
+          "rewarding", "popular", "service", "impact"]
+y = df[y_col].values.astype(float)
+X = df[X_cols].astype(float)
+
+pearson = X.apply(lambda c: np.corrcoef(c, y)[0, 1])
+
+Xs = (X - X.mean()) / X.std(ddof=0)
+ys = (y - y.mean()) / y.std(ddof=0)
+design = np.column_stack([np.ones(len(Xs)), Xs.values])
+beta = np.linalg.lstsq(design, ys, rcond=None)[0][1:]
+std_coef = pd.Series(beta, index=X_cols)
+
+def r2(cols):
+    if len(cols) == 0:
+        return 0.0
+    Xm = sm.add_constant(X[list(cols)].values)
+    return sm.OLS(y, Xm).fit().rsquared
+
+full_r2 = r2(X_cols)
+drop_one = pd.Series({c: full_r2 - r2([x for x in X_cols if x != c]) for c in X_cols})
+
+cache = {}
+def R2(cols):
+    key = frozenset(cols)
+    if key not in cache:
+        cache[key] = r2(list(cols))
+    return cache[key]
+
+n = len(X_cols)
+shapley = {c: 0.0 for c in X_cols}
+for c in X_cols:
+    others = [x for x in X_cols if x != c]
+    for k in range(len(others) + 1):
+        for combo in combinations(others, k):
+            w = factorial(k) * factorial(n - k - 1) / factorial(n)
+            shapley[c] += w * (R2(list(combo) + [c]) - R2(list(combo)))
+shapley = pd.Series(shapley)
+
+Xc = Xs.values
+Rxx = np.corrcoef(Xc, rowvar=False)
+Rxy = np.array([np.corrcoef(Xc[:, i], ys)[0, 1] for i in range(n)])
+evals, evecs = np.linalg.eigh(Rxx)
+Lambda = evecs @ np.diag(np.sqrt(evals)) @ evecs.T
+beta_z = np.linalg.solve(Lambda, Rxy)
+johnson = pd.Series((Lambda ** 2) @ (beta_z ** 2), index=X_cols)
+
+rf = RandomForestRegressor(n_estimators=500, random_state=42)
+rf.fit(X.values, y)
+rf_gini = pd.Series(rf.feature_importances_, index=X_cols)
+
+table = pd.DataFrame({
+    "Pearson Corr.":  pearson,
+    "Std. Coef.":     std_coef,
+    "Usefulness":     drop_one,
+    "Shapley":        shapley,
+    "Johnson's RW":   johnson,
+    "RF Gini":        rf_gini,
+})
+nice = {c: c.capitalize() for c in X_cols}
+```
+
+## Results
+
+```{python}
+#| label: tbl-main
+table.round(3)
+```
+
+The Shapley values and Johnson's relative weights each sum to the full-model
+$R^2$ of `{python} round(full_r2, 3)`, confirming both decompositions are correct.
+
+## Visualizing the Drivers
+
+### Which attributes matter most?
+
+```{python}
+#| label: fig-shapley
+#| fig-cap: "Drivers ranked by Shapley value (share of explained variance)."
+s = shapley.sort_values()
+colors = plt.cm.viridis(np.linspace(0.15, 0.85, len(s)))
+fig, ax = plt.subplots(figsize=(8, 4.5))
+ax.barh([nice[i] for i in s.index], s.values, color=colors)
+ax.set_xlabel("Shapley value (contribution to $R^2$)")
+ax.set_title("Key Drivers of Satisfaction")
+for i, v in enumerate(s.values):
+    ax.text(v + 0.0004, i, f"{v:.3f}", va="center", fontsize=9)
+plt.tight_layout(); plt.show()
+```
+
+`Trust`, `impact`, and `service` stand out as the strongest unique drivers.
+
+### Do the six metrics agree?
+
+```{python}
+#| label: fig-heatmap
+#| fig-cap: "Each importance metric, min-max scaled within its column."
+norm = (table - table.min()) / (table.max() - table.min())
+order = shapley.sort_values(ascending=False).index
+norm = norm.loc[order]
+fig, ax = plt.subplots(figsize=(8.5, 5))
+im = ax.imshow(norm.values, cmap="YlGnBu", aspect="auto", vmin=0, vmax=1)
+ax.set_xticks(range(norm.shape[1])); ax.set_xticklabels(norm.columns, rotation=30, ha="right")
+ax.set_yticks(range(norm.shape[0])); ax.set_yticklabels([nice[i] for i in norm.index])
+for i in range(norm.shape[0]):
+    for j in range(norm.shape[1]):
+        v = norm.values[i, j]
+        ax.text(j, i, f"{v:.2f}", ha="center", va="center",
+                color="white" if v > 0.55 else "black", fontsize=8)
+cbar = fig.colorbar(im, ax=ax, fraction=0.025, pad=0.02)
+cbar.set_label("Relative importance (scaled)")
+ax.set_title("Importance Across All Six Metrics")
+plt.tight_layout(); plt.show()
+```
+
+`Trust`, `impact`, and `service` stay dark (high) across every method, while
+`popular`, `build`, and `rewarding` stay light (low). The methods broadly agree.
+
+### Bivariate vs. partial importance
+
+```{python}
+#| label: fig-scatter
+#| fig-cap: "Simple correlation vs. unique Shapley contribution."
+fig, ax = plt.subplots(figsize=(7.5, 5))
+ax.scatter(pearson.values, shapley.values, s=70,
+           color="#2c7fb8", edgecolor="white", zorder=3)
+for c in X_cols:
+    ax.annotate(nice[c], (pearson[c], shapley[c]),
+                textcoords="offset points", xytext=(6, 4), fontsize=9)
+ax.set_xlabel("Pearson correlation with satisfaction")
+ax.set_ylabel("Shapley value")
+ax.set_title("Raw Correlation vs. Unique Contribution")
+ax.grid(alpha=0.25, zorder=0)
+plt.tight_layout(); plt.show()
+```
+
+Drivers in the upper-right (`trust`, `impact`, `service`) are both strongly
+correlated and uniquely important.
+
+### How the drivers relate to one another
+
+```{python}
+#| label: fig-corr
+#| fig-cap: "Pairwise Pearson correlations among the nine drivers."
+corr = X.corr()
+fig, ax = plt.subplots(figsize=(7, 6))
+im = ax.imshow(corr.values, cmap="RdBu_r", vmin=-1, vmax=1)
+ax.set_xticks(range(n)); ax.set_xticklabels([nice[c] for c in X_cols], rotation=45, ha="right")
+ax.set_yticks(range(n)); ax.set_yticklabels([nice[c] for c in X_cols])
+for i in range(n):
+    for j in range(n):
+        v = corr.values[i, j]
+        ax.text(j, i, f"{v:.2f}", ha="center", va="center",
+                color="white" if abs(v) > 0.5 else "black", fontsize=7)
+fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04)
+ax.set_title("Correlation Among Drivers")
+plt.tight_layout(); plt.show()
+```
+
+The drivers are positively but moderately correlated, which is why the partition
+methods spread importance more evenly than raw correlations alone would.
+
+## Bonus: Shapley Values for a Logistic Model
+
+The metrics above all treat satisfaction as continuous. As an extra step, I extend
+the Shapley decomposition to a **logistic regression**, which models a binary
+outcome — here, whether a customer is *highly satisfied* (a rating of 4 or 5) versus
+not. About `{python} round((df["satisfaction"]>=4).mean()*100)`% of customers fall
+in the highly-satisfied group, so the split is fairly balanced.
+
+Because a logit has no ordinary $R^2$, the fit metric becomes **McFadden's
+pseudo-$R^2$**, $1 - \ell_{\text{model}} / \ell_{\text{null}}$, where $\ell$ is the
+model log-likelihood. The Shapley logic is identical: each driver's value is its
+average marginal gain in pseudo-$R^2$ across all $2^9$ subsets of drivers.
+
+```{python}
+#| label: logit-shapley
+yb = (df["satisfaction"] >= 4).astype(int).values
+ll0 = sm.Logit(yb, np.ones((len(yb), 1))).fit(disp=0).llf  # null log-likelihood
+
+lcache = {}
+def pseudo_r2(cols):
+    key = frozenset(cols)
+    if key in lcache:
+        return lcache[key]
+    if len(cols) == 0:
+        lcache[key] = 0.0
+        return 0.0
+    Xm = sm.add_constant(X[list(cols)].values)
+    res = sm.Logit(yb, Xm).fit(disp=0, maxiter=200)
+    lcache[key] = 1 - res.llf / ll0            # McFadden pseudo-R^2
+    return lcache[key]
+
+logit_full = pseudo_r2(X_cols)
+logit_shap = {c: 0.0 for c in X_cols}
+for c in X_cols:
+    others = [x for x in X_cols if x != c]
+    for k in range(len(others) + 1):
+        for combo in combinations(others, k):
+            w = factorial(k) * factorial(n - k - 1) / factorial(n)
+            logit_shap[c] += w * (pseudo_r2(list(combo) + [c]) - pseudo_r2(list(combo)))
+logit_shap = pd.Series(logit_shap)
+
+print(f"Sum of logit Shapley values: {logit_shap.sum():.4f}")
+print(f"Full model pseudo-R^2:       {logit_full:.4f}")
+```
+
+The values again sum to the full-model pseudo-$R^2$, confirming the decomposition.
+The chart compares each driver's linear Shapley value against its logistic-model
+counterpart.
+
+```{python}
+#| label: fig-logit
+#| fig-cap: "Linear Shapley (R²) vs. logistic Shapley (pseudo-R²)."
+order = shapley.sort_values(ascending=False).index
+lin = shapley[order].values
+log = logit_shap[order].values
+ypos = np.arange(len(order))
+fig, ax = plt.subplots(figsize=(8.5, 4.8))
+bw = 0.4
+ax.barh(ypos + bw/2, lin, height=bw, color="#2c7fb8", label="Linear (R²)")
+ax.barh(ypos - bw/2, log, height=bw, color="#d95f0e", label="Logistic (pseudo-R²)")
+ax.set_yticks(ypos); ax.set_yticklabels([nice[c] for c in order])
+ax.invert_yaxis()
+ax.set_xlabel("Shapley value")
+ax.set_title("Linear vs. Logistic Shapley Decomposition")
+ax.legend(frameon=False)
+plt.tight_layout(); plt.show()
+```
+
+The two models produce the same top tier — `impact`, `trust`, and `service` — so the
+conclusion is robust to whether satisfaction is treated as continuous or as a
+high/low binary outcome. The pseudo-$R^2$ magnitudes are naturally smaller, since a
+logit explains a coarser, binary target.
+
+## Discussion
+
+The metrics tell a consistent story. **`Trust`, `impact`, and `service`** rank at
+the top across essentially every method.
+
+- **Bivariate vs. partial importance.** All nine drivers have similar raw Pearson
+  correlations (~0.17–0.26), but the partial metrics spread them out more because
+  the drivers are correlated with one another.
+- **Shapley and Johnson agree closely.** Both decompose $R^2$ and produce nearly
+  identical rankings.
+- **Usefulness understates correlated drivers.** Drop-one values are small because
+  removing one correlated predictor barely hurts the model.
+- **Random forest spreads importance more evenly** but still places `trust`,
+  `impact`, and `service` at the top.
+- **The ranking survives a change of model.** Decomposing a logistic model on a
+  binary high/low-satisfaction outcome yields the same leading drivers, so the
+  result is not an artifact of treating satisfaction as continuous.
+
+For management, the takeaway is to prioritize the attributes that drive satisfaction
+most strongly and uniquely — **trust, impact, and service**.

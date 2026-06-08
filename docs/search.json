@@ -25,7 +25,7 @@
     "href": "projects.html",
     "title": "My Projects",
     "section": "",
-    "text": "A/B Testing a Call to Action\n\n\n\n\n\n\nLawrence Lin\n\n\nMay 29, 2026\n\n\n\n\n\n\n\n\n\n\n\nMaxDiff Analysis of MSBA Class Preferences\n\n\n\n\n\n\nLawrence Lin\n\n\nMay 29, 2026\n\n\n\n\n\n\n\n\n\n\n\nOne Tag, Endless Possibilities\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPoisson Regression and Maximum Likelihood Estimation\n\n\n\n\n\n\nLawrence Lin\n\n\nMay 29, 2026\n\n\n\n\n\n\n\n\n\n\n\nReplication of Karlan and List (2007)\n\n\n\n\n\n\nLawrence Lin\n\n\nMay 29, 2026\n\n\n\n\n\n\nNo matching items"
+    "text": "A/B Testing a Call to Action\n\n\n\n\n\n\nLawrence Lin\n\n\nJun 8, 2026\n\n\n\n\n\n\n\n\n\n\n\nKey Drivers Analysis\n\n\n\n\n\n\nLawrence Lin\n\n\nJun 8, 2026\n\n\n\n\n\n\n\n\n\n\n\nMaxDiff Analysis of MSBA Class Preferences\n\n\n\n\n\n\nLawrence Lin\n\n\nJun 8, 2026\n\n\n\n\n\n\n\n\n\n\n\nOne Tag, Endless Possibilities\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPoisson Regression and Maximum Likelihood Estimation\n\n\n\n\n\n\nLawrence Lin\n\n\nJun 8, 2026\n\n\n\n\n\n\n\n\n\n\n\nReplication of Karlan and List (2007)\n\n\n\n\n\n\nLawrence Lin\n\n\nJun 8, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -915,5 +915,250 @@
     "title": "Lawrence Lin",
     "section": "Example 4 — Live Jupyter Notebook",
     "text": "Example 4 — Live Jupyter Notebook\n\n05 / LIVE DEMO  ·  JupyterLite runs entirely in the browser — audience can edit & run code live   ↗ Open in Colab"
+  },
+  {
+    "objectID": "projects/Presentation/Lin_Lawrence-iframe_embeds.html#section",
+    "href": "projects/Presentation/Lin_Lawrence-iframe_embeds.html#section",
+    "title": "Lawrence Lin",
+    "section": "",
+    "text": "Embed Anything with &lt;iframe&gt;\n\n\nEmbedding interactive content with one simple tag\n\n\nYouTube Google Maps Tableau Jupyter"
+  },
+  {
+    "objectID": "projects/Presentation/Lin_Lawrence-iframe_embeds.html#one-tag-endless-possibilities",
+    "href": "projects/Presentation/Lin_Lawrence-iframe_embeds.html#one-tag-endless-possibilities",
+    "title": "Lawrence Lin",
+    "section": "One Tag, Endless Possibilities",
+    "text": "One Tag, Endless Possibilities\n\n01 / THE BIG IDEA\n\n\n\n\n\nA static screenshot is frozen. But with one &lt;iframe&gt; you can drop live, interactive content straight into your slides or website.\n\n\nVideos, maps, dashboards, notebooks — if it lives on the web, you can embed it.\n\n\n\n\n\n::: {=html}\n&lt;iframe\n  src=\"PASTE_ANY_URL_HERE\"\n  width=\"100%\"\n  height=\"500px\"\n  frameborder=\"0\"\n  allowfullscreen&gt;\n&lt;/iframe&gt;\n:::\n\n✓ Same pattern works for everything"
+  },
+  {
+    "objectID": "projects/Presentation/Lin_Lawrence-iframe_embeds.html#example-1-youtube-video",
+    "href": "projects/Presentation/Lin_Lawrence-iframe_embeds.html#example-1-youtube-video",
+    "title": "Lawrence Lin",
+    "section": "Example 1 — YouTube Video",
+    "text": "Example 1 — YouTube Video\n\n02 / LIVE DEMO  ·  youtube.com/embed/VIDEO_ID"
+  },
+  {
+    "objectID": "projects/Presentation/Lin_Lawrence-iframe_embeds.html#example-2-google-maps",
+    "href": "projects/Presentation/Lin_Lawrence-iframe_embeds.html#example-2-google-maps",
+    "title": "Lawrence Lin",
+    "section": "Example 2 — Google Maps",
+    "text": "Example 2 — Google Maps\n\n03 / LIVE DEMO  ·  maps.google.com/maps?q=…&output=embed"
+  },
+  {
+    "objectID": "projects/Presentation/Lin_Lawrence-iframe_embeds.html#example-3-tableau-dashboard",
+    "href": "projects/Presentation/Lin_Lawrence-iframe_embeds.html#example-3-tableau-dashboard",
+    "title": "Lawrence Lin",
+    "section": "Example 3 — Tableau Dashboard",
+    "text": "Example 3 — Tableau Dashboard\n\n04 / LIVE DEMO  ·  ↗ View on Tableau Public"
+  },
+  {
+    "objectID": "projects/Presentation/Lin_Lawrence-iframe_embeds.html#example-4-live-jupyter-notebook",
+    "href": "projects/Presentation/Lin_Lawrence-iframe_embeds.html#example-4-live-jupyter-notebook",
+    "title": "Lawrence Lin",
+    "section": "Example 4 — Live Jupyter Notebook",
+    "text": "Example 4 — Live Jupyter Notebook\n\n05 / LIVE DEMO  ·  JupyterLite runs entirely in the browser — audience can edit & run code live   ↗ Open in Colab"
+  },
+  {
+    "objectID": "projects/Presentation/Lin_Lawrence-iframe_embeds.html#key-takeaways",
+    "href": "projects/Presentation/Lin_Lawrence-iframe_embeds.html#key-takeaways",
+    "title": "Lawrence Lin",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\nOne tag. Endless possibilities.\n\n\nAnything that lives at a URL — a video, a map, a dashboard, a notebook — can be embedded with a single &lt;iframe&gt; inside a ::: {=html} block.\n\n\n✓   Find the content’s embed URL (Share → Embed)\n\n\n✓   Drop it into an &lt;iframe&gt; in your .qmd file\n\n\n✓   Set width / height, then quarto render\n\n\n✓   Your slides & site become interactive, not static"
+  },
+  {
+    "objectID": "projects/HW5/hw5_questions.html",
+    "href": "projects/HW5/hw5_questions.html",
+    "title": "Key Drivers Analysis",
+    "section": "",
+    "text": "This post replicates the variable-importance table from slide 75 of the Key Drivers slides. Using customer-satisfaction survey data, I measure how much each of nine perception attributes drives overall satisfaction, using six different importance metrics:\n\nPearson correlations — simple bivariate association with the outcome.\nStandardized regression coefficients — partial effect, controlling for other drivers.\nUsefulness (drop-one) — the drop in \\(R^2\\) when a variable is removed from the full model.\nShapley values — average marginal \\(R^2\\) contribution across all variable orderings (own implementation).\nJohnson’s relative weights — an approximation that partitions \\(R^2\\) among correlated predictors.\nMean decrease in Gini (Random Forest) — impurity-based importance from a random forest.\n\nThe polychoric correlations are omitted, as permitted by the assignment."
+  },
+  {
+    "objectID": "projects/HW5/key_drivers_analysis.html",
+    "href": "projects/HW5/key_drivers_analysis.html",
+    "title": "Key Drivers Analysis",
+    "section": "",
+    "text": "This post replicates the variable-importance table from slide 75 of the Key Drivers slides. Using customer-satisfaction survey data, I measure how much each of nine perception attributes drives overall satisfaction, using six different importance metrics:\n\nPearson correlations — simple bivariate association with the outcome.\nStandardized regression coefficients — partial effect, controlling for other drivers.\nUsefulness (drop-one) — the drop in \\(R^2\\) when a variable is removed from the full model.\nShapley values — average marginal \\(R^2\\) contribution across all variable orderings (own implementation).\nJohnson’s relative weights — an approximation that partitions \\(R^2\\) among correlated predictors.\nMean decrease in Gini (Random Forest) — impurity-based importance from a random forest.\n\nThe polychoric correlations are omitted, as permitted by the assignment."
+  },
+  {
+    "objectID": "projects/HW5/key_drivers_analysis.html#overview",
+    "href": "projects/HW5/key_drivers_analysis.html#overview",
+    "title": "Key Drivers Analysis",
+    "section": "",
+    "text": "This post replicates the variable-importance table from slide 75 of the Key Drivers slides. Using customer-satisfaction survey data, I measure how much each of nine perception attributes drives overall satisfaction, using six different importance metrics:\n\nPearson correlations — simple bivariate association with the outcome.\nStandardized regression coefficients — partial effect, controlling for other drivers.\nUsefulness (drop-one) — the drop in \\(R^2\\) when a variable is removed from the full model.\nShapley values — average marginal \\(R^2\\) contribution across all variable orderings (own implementation).\nJohnson’s relative weights — an approximation that partitions \\(R^2\\) among correlated predictors.\nMean decrease in Gini (Random Forest) — impurity-based importance from a random forest.\n\nThe polychoric correlations are omitted, as permitted by the assignment."
+  },
+  {
+    "objectID": "projects/HW5/key_drivers_analysis.html#setup",
+    "href": "projects/HW5/key_drivers_analysis.html#setup",
+    "title": "Key Drivers Analysis",
+    "section": "Setup",
+    "text": "Setup\n\n\nCode\nimport pandas as pd\nimport numpy as np\nfrom itertools import combinations\nfrom math import factorial\nfrom sklearn.ensemble import RandomForestRegressor\nimport statsmodels.api as sm\n\ndf = pd.read_csv(\"data_for_drivers_analysis.csv\")\n\ny_col = \"satisfaction\"\nX_cols = [\"trust\", \"build\", \"differs\", \"easy\", \"appealing\",\n          \"rewarding\", \"popular\", \"service\", \"impact\"]\n\ny = df[y_col].values.astype(float)\nX = df[X_cols].astype(float)\n\ndf.head()\n\n\n\n\n\n\n\n\n\nbrand\nid\nsatisfaction\ntrust\nbuild\ndiffers\neasy\nappealing\nrewarding\npopular\nservice\nimpact\n\n\n\n\n0\n1\n98\n3\n1\n0\n1\n1\n1\n0\n0\n1\n0\n\n\n1\n1\n179\n5\n0\n0\n0\n0\n0\n0\n0\n0\n0\n\n\n2\n1\n197\n3\n1\n0\n0\n1\n1\n1\n0\n1\n1\n\n\n3\n1\n317\n1\n0\n0\n0\n0\n1\n0\n1\n1\n1\n\n\n4\n1\n356\n4\n1\n1\n1\n1\n1\n1\n1\n1\n1\n\n\n\n\n\n\n\nThe outcome is overall satisfaction (1–5). The nine drivers are binary survey agreement items (e.g. the brand is trustworthy, easy to use, has positive impact, etc.)."
+  },
+  {
+    "objectID": "projects/HW5/key_drivers_analysis.html#pearson-correlations",
+    "href": "projects/HW5/key_drivers_analysis.html#pearson-correlations",
+    "title": "Key Drivers Analysis",
+    "section": "1. Pearson Correlations",
+    "text": "1. Pearson Correlations\n\n\nCode\npearson = X.apply(lambda c: np.corrcoef(c, y)[0, 1])"
+  },
+  {
+    "objectID": "projects/HW5/key_drivers_analysis.html#standardized-regression-coefficients",
+    "href": "projects/HW5/key_drivers_analysis.html#standardized-regression-coefficients",
+    "title": "Key Drivers Analysis",
+    "section": "2. Standardized Regression Coefficients",
+    "text": "2. Standardized Regression Coefficients\nStandardizing both sides puts every coefficient on the same scale, so they can be compared directly as partial effects.\n\n\nCode\nXs = (X - X.mean()) / X.std(ddof=0)\nys = (y - y.mean()) / y.std(ddof=0)\n\ndesign = np.column_stack([np.ones(len(Xs)), Xs.values])\nbeta = np.linalg.lstsq(design, ys, rcond=None)[0][1:]\nstd_coef = pd.Series(beta, index=X_cols)"
+  },
+  {
+    "objectID": "projects/HW5/key_drivers_analysis.html#usefulness-drop-one",
+    "href": "projects/HW5/key_drivers_analysis.html#usefulness-drop-one",
+    "title": "Key Drivers Analysis",
+    "section": "3. Usefulness (Drop-One)",
+    "text": "3. Usefulness (Drop-One)\nEach driver’s usefulness is the reduction in model \\(R^2\\) caused by dropping it from the full nine-predictor regression.\n\n\nCode\ndef r2(cols):\n    if len(cols) == 0:\n        return 0.0\n    Xm = sm.add_constant(X[list(cols)].values)\n    return sm.OLS(y, Xm).fit().rsquared\n\nfull_r2 = r2(X_cols)\n\ndrop_one = pd.Series(\n    {c: full_r2 - r2([x for x in X_cols if x != c]) for c in X_cols}\n)"
+  },
+  {
+    "objectID": "projects/HW5/key_drivers_analysis.html#shapley-values-own-implementation",
+    "href": "projects/HW5/key_drivers_analysis.html#shapley-values-own-implementation",
+    "title": "Key Drivers Analysis",
+    "section": "4. Shapley Values (own implementation)",
+    "text": "4. Shapley Values (own implementation)\nTreating each subset of drivers as a “coalition” and \\(R^2\\) as the value function, the Shapley value of a driver is its average marginal contribution to \\(R^2\\) across all possible orderings. The weights follow the standard Shapley formula \\(\\frac{|S|!\\,(n-|S|-1)!}{n!}\\). With nine drivers this enumerates all \\(2^9\\) subsets.\n\n\nCode\ncache = {}\n\ndef R2(cols):\n    key = frozenset(cols)\n    if key not in cache:\n        cache[key] = r2(list(cols))\n    return cache[key]\n\nn = len(X_cols)\nshapley = {c: 0.0 for c in X_cols}\n\nfor c in X_cols:\n    others = [x for x in X_cols if x != c]\n    for k in range(len(others) + 1):\n        for combo in combinations(others, k):\n            w = factorial(k) * factorial(n - k - 1) / factorial(n)\n            shapley[c] += w * (R2(list(combo) + [c]) - R2(list(combo)))\n\nshapley = pd.Series(shapley)\n\n# Sanity check: Shapley values should sum to the full-model R^2\nprint(f\"Sum of Shapley values: {shapley.sum():.4f}\")\nprint(f\"Full model R^2:        {full_r2:.4f}\")\n\n\nSum of Shapley values: 0.1090\nFull model R^2:        0.1090\n\n\nThe Shapley values sum exactly to the full-model \\(R^2\\), confirming the decomposition is correct."
+  },
+  {
+    "objectID": "projects/HW5/key_drivers_analysis.html#johnsons-relative-weights",
+    "href": "projects/HW5/key_drivers_analysis.html#johnsons-relative-weights",
+    "title": "Key Drivers Analysis",
+    "section": "5. Johnson’s Relative Weights",
+    "text": "5. Johnson’s Relative Weights\nJohnson’s relative weights transform the correlated predictors into an orthogonal set (via the symmetric square root of the predictor correlation matrix), regress the outcome on those, then map the contributions back to the original variables. They also sum to the model \\(R^2\\).\n\n\nCode\nXc = Xs.values\nRxx = np.corrcoef(Xc, rowvar=False)\nRxy = np.array([np.corrcoef(Xc[:, i], ys)[0, 1] for i in range(n)])\n\nevals, evecs = np.linalg.eigh(Rxx)\nLambda = evecs @ np.diag(np.sqrt(evals)) @ evecs.T   # symmetric sqrt of Rxx\nbeta_z = np.linalg.solve(Lambda, Rxy)\njohnson = pd.Series((Lambda ** 2) @ (beta_z ** 2), index=X_cols)\n\nprint(f\"Sum of Johnson weights: {johnson.sum():.4f}\")\n\n\nSum of Johnson weights: 0.1090"
+  },
+  {
+    "objectID": "projects/HW5/key_drivers_analysis.html#random-forest-mean-decrease-in-gini",
+    "href": "projects/HW5/key_drivers_analysis.html#random-forest-mean-decrease-in-gini",
+    "title": "Key Drivers Analysis",
+    "section": "6. Random Forest — Mean Decrease in Gini",
+    "text": "6. Random Forest — Mean Decrease in Gini\nFor a regression random forest, the analogue of “mean decrease in Gini” is the impurity-based feature importance (mean decrease in variance), normalized to sum to 1.\n\n\nCode\nrf = RandomForestRegressor(n_estimators=500, random_state=42)\nrf.fit(X.values, y)\nrf_gini = pd.Series(rf.feature_importances_, index=X_cols)"
+  },
+  {
+    "objectID": "projects/HW5/key_drivers_analysis.html#results",
+    "href": "projects/HW5/key_drivers_analysis.html#results",
+    "title": "Key Drivers Analysis",
+    "section": "Results",
+    "text": "Results\n\n\nCode\ntable = pd.DataFrame({\n    \"Pearson Corr.\":        pearson,\n    \"Std. Coef.\":           std_coef,\n    \"Usefulness\":           drop_one,\n    \"Shapley\":              shapley,\n    \"Johnson's RW\":         johnson,\n    \"RF Gini\":              rf_gini,\n}).round(3)\n\ntable\n\n\n\n\n\n\n\n\n\nPearson Corr.\nStd. Coef.\nUsefulness\nShapley\nJohnson's RW\nRF Gini\n\n\n\n\ntrust\n0.256\n0.116\n0.008\n0.022\n0.022\n0.152\n\n\nbuild\n0.192\n0.020\n0.000\n0.007\n0.007\n0.100\n\n\ndiffers\n0.185\n0.028\n0.001\n0.007\n0.008\n0.090\n\n\neasy\n0.213\n0.022\n0.000\n0.009\n0.009\n0.097\n\n\nappealing\n0.208\n0.034\n0.001\n0.009\n0.009\n0.085\n\n\nrewarding\n0.195\n0.005\n0.000\n0.007\n0.007\n0.105\n\n\npopular\n0.171\n0.017\n0.000\n0.006\n0.006\n0.095\n\n\nservice\n0.251\n0.088\n0.005\n0.018\n0.018\n0.136\n\n\nimpact\n0.255\n0.128\n0.011\n0.024\n0.024\n0.140"
+  },
+  {
+    "objectID": "projects/HW5/key_drivers_analysis.html#discussion",
+    "href": "projects/HW5/key_drivers_analysis.html#discussion",
+    "title": "Key Drivers Analysis",
+    "section": "Discussion",
+    "text": "Discussion\nThe metrics tell a consistent story about which attributes matter most. trust, impact, and service rank at the top across essentially every method — they have the highest Pearson correlations, the largest standardized coefficients, and the biggest Shapley / Johnson / random-forest contributions.\nA few things worth noting:\n\nBivariate vs. partial importance. All nine drivers have similar raw Pearson correlations (~0.17–0.26), but the standardized coefficients, usefulness, and Shapley values spread them out much more. This is because the drivers are correlated with one another, so a strong simple correlation does not always translate into a unique contribution once the other drivers are controlled for.\nShapley and Johnson agree closely. Both decompose \\(R^2\\) and produce nearly identical rankings and magnitudes, which is the expected result — Johnson’s relative weights are an efficient approximation to the Shapley decomposition.\nUsefulness understates correlated drivers. Drop-one values are small (and near zero for several drivers) because removing one correlated predictor barely hurts the model when its neighbors carry the same information. Shapley values are the more even-handed allocation.\nRandom forest spreads importance more evenly and tends to reward variables with more split opportunities, but still places trust, impact, and service at the top, agreeing with the linear metrics.\n\nFor management, the practical takeaway is to prioritize the attributes that drive satisfaction most strongly and uniquely — trust, impact, and service — rather than attributes that merely correlate with satisfaction in isolation."
+  },
+  {
+    "objectID": "projects/HW5/key_drivers_analysis (1).html",
+    "href": "projects/HW5/key_drivers_analysis (1).html",
+    "title": "Key Drivers Analysis",
+    "section": "",
+    "text": "This post replicates the variable-importance table from slide 75 of the Key Drivers slides. Using customer-satisfaction survey data, I measure how much each of nine perception attributes drives overall satisfaction, using six different importance metrics:\n\nPearson correlations — simple bivariate association with the outcome.\nStandardized regression coefficients — partial effect, controlling for other drivers.\nUsefulness (drop-one) — the drop in \\(R^2\\) when a variable is removed from the full model.\nShapley values — average marginal \\(R^2\\) contribution across all variable orderings (own implementation).\nJohnson’s relative weights — an approximation that partitions \\(R^2\\) among correlated predictors.\nMean decrease in Gini (Random Forest) — impurity-based importance from a random forest.\n\nThe polychoric correlations are omitted, as permitted by the assignment."
+  },
+  {
+    "objectID": "projects/HW5/key_drivers_analysis (1).html#overview",
+    "href": "projects/HW5/key_drivers_analysis (1).html#overview",
+    "title": "Key Drivers Analysis",
+    "section": "",
+    "text": "This post replicates the variable-importance table from slide 75 of the Key Drivers slides. Using customer-satisfaction survey data, I measure how much each of nine perception attributes drives overall satisfaction, using six different importance metrics:\n\nPearson correlations — simple bivariate association with the outcome.\nStandardized regression coefficients — partial effect, controlling for other drivers.\nUsefulness (drop-one) — the drop in \\(R^2\\) when a variable is removed from the full model.\nShapley values — average marginal \\(R^2\\) contribution across all variable orderings (own implementation).\nJohnson’s relative weights — an approximation that partitions \\(R^2\\) among correlated predictors.\nMean decrease in Gini (Random Forest) — impurity-based importance from a random forest.\n\nThe polychoric correlations are omitted, as permitted by the assignment."
+  },
+  {
+    "objectID": "projects/HW5/key_drivers_analysis (1).html#results",
+    "href": "projects/HW5/key_drivers_analysis (1).html#results",
+    "title": "Key Drivers Analysis",
+    "section": "Results",
+    "text": "Results\n\n\n\n\nTable 1\n\n\n\n\n\n\n\n\n\n\nPearson Corr.\nStd. Coef.\nUsefulness\nShapley\nJohnson's RW\nRF Gini\n\n\n\n\ntrust\n0.256\n0.116\n0.008\n0.022\n0.022\n0.152\n\n\nbuild\n0.192\n0.020\n0.000\n0.007\n0.007\n0.100\n\n\ndiffers\n0.185\n0.028\n0.001\n0.007\n0.008\n0.090\n\n\neasy\n0.213\n0.022\n0.000\n0.009\n0.009\n0.097\n\n\nappealing\n0.208\n0.034\n0.001\n0.009\n0.009\n0.085\n\n\nrewarding\n0.195\n0.005\n0.000\n0.007\n0.007\n0.105\n\n\npopular\n0.171\n0.017\n0.000\n0.006\n0.006\n0.095\n\n\nservice\n0.251\n0.088\n0.005\n0.018\n0.018\n0.136\n\n\nimpact\n0.255\n0.128\n0.011\n0.024\n0.024\n0.140\n\n\n\n\n\n\n\n\n\n\nThe Shapley values and Johnson’s relative weights each sum to the full-model \\(R^2\\) of np.float64(0.109), confirming both decompositions are correct."
+  },
+  {
+    "objectID": "projects/HW5/key_drivers_analysis (1).html#visualizing-the-drivers",
+    "href": "projects/HW5/key_drivers_analysis (1).html#visualizing-the-drivers",
+    "title": "Key Drivers Analysis",
+    "section": "Visualizing the Drivers",
+    "text": "Visualizing the Drivers\n\nWhich attributes matter most?\n\n\n\n\n\n\n\n\nFigure 1: Drivers ranked by Shapley value (share of explained variance).\n\n\n\n\n\nTrust, impact, and service stand out as the strongest unique drivers.\n\n\nDo the six metrics agree?\n\n\n\n\n\n\n\n\nFigure 2: Each importance metric, min-max scaled within its column.\n\n\n\n\n\nTrust, impact, and service stay dark (high) across every method, while popular, build, and rewarding stay light (low). The methods broadly agree.\n\n\nBivariate vs. partial importance\n\n\n\n\n\n\n\n\nFigure 3: Simple correlation vs. unique Shapley contribution.\n\n\n\n\n\nDrivers in the upper-right (trust, impact, service) are both strongly correlated and uniquely important.\n\n\nHow the drivers relate to one another\n\n\n\n\n\n\n\n\nFigure 4: Pairwise Pearson correlations among the nine drivers.\n\n\n\n\n\nThe drivers are positively but moderately correlated, which is why the partition methods spread importance more evenly than raw correlations alone would."
+  },
+  {
+    "objectID": "projects/HW5/key_drivers_analysis (1).html#discussion",
+    "href": "projects/HW5/key_drivers_analysis (1).html#discussion",
+    "title": "Key Drivers Analysis",
+    "section": "Discussion",
+    "text": "Discussion\nThe metrics tell a consistent story. Trust, impact, and service rank at the top across essentially every method.\n\nBivariate vs. partial importance. All nine drivers have similar raw Pearson correlations (~0.17–0.26), but the partial metrics spread them out more because the drivers are correlated with one another.\nShapley and Johnson agree closely. Both decompose \\(R^2\\) and produce nearly identical rankings.\nUsefulness understates correlated drivers. Drop-one values are small because removing one correlated predictor barely hurts the model.\nRandom forest spreads importance more evenly but still places trust, impact, and service at the top.\n\nFor management, the takeaway is to prioritize the attributes that drive satisfaction most strongly and uniquely — trust, impact, and service."
+  },
+  {
+    "objectID": "projects/HW5/key_drivers_analysis (2).html",
+    "href": "projects/HW5/key_drivers_analysis (2).html",
+    "title": "Key Drivers Analysis",
+    "section": "",
+    "text": "This post replicates the variable-importance table from slide 75 of the Key Drivers slides. Using customer-satisfaction survey data, I measure how much each of nine perception attributes drives overall satisfaction, using six different importance metrics:\n\nPearson correlations — simple bivariate association with the outcome.\nStandardized regression coefficients — partial effect, controlling for other drivers.\nUsefulness (drop-one) — the drop in \\(R^2\\) when a variable is removed from the full model.\nShapley values — average marginal \\(R^2\\) contribution across all variable orderings (own implementation).\nJohnson’s relative weights — an approximation that partitions \\(R^2\\) among correlated predictors.\nMean decrease in Gini (Random Forest) — impurity-based importance from a random forest.\n\nThe polychoric correlations are omitted, as permitted by the assignment."
+  },
+  {
+    "objectID": "projects/HW5/key_drivers_analysis (2).html#overview",
+    "href": "projects/HW5/key_drivers_analysis (2).html#overview",
+    "title": "Key Drivers Analysis",
+    "section": "",
+    "text": "This post replicates the variable-importance table from slide 75 of the Key Drivers slides. Using customer-satisfaction survey data, I measure how much each of nine perception attributes drives overall satisfaction, using six different importance metrics:\n\nPearson correlations — simple bivariate association with the outcome.\nStandardized regression coefficients — partial effect, controlling for other drivers.\nUsefulness (drop-one) — the drop in \\(R^2\\) when a variable is removed from the full model.\nShapley values — average marginal \\(R^2\\) contribution across all variable orderings (own implementation).\nJohnson’s relative weights — an approximation that partitions \\(R^2\\) among correlated predictors.\nMean decrease in Gini (Random Forest) — impurity-based importance from a random forest.\n\nThe polychoric correlations are omitted, as permitted by the assignment."
+  },
+  {
+    "objectID": "projects/HW5/key_drivers_analysis (2).html#results",
+    "href": "projects/HW5/key_drivers_analysis (2).html#results",
+    "title": "Key Drivers Analysis",
+    "section": "Results",
+    "text": "Results\n\n\n\n\nTable 1\n\n\n\n\n\n\n\n\n\n\nPearson Corr.\nStd. Coef.\nUsefulness\nShapley\nJohnson's RW\nRF Gini\n\n\n\n\ntrust\n0.256\n0.116\n0.008\n0.022\n0.022\n0.152\n\n\nbuild\n0.192\n0.020\n0.000\n0.007\n0.007\n0.100\n\n\ndiffers\n0.185\n0.028\n0.001\n0.007\n0.008\n0.090\n\n\neasy\n0.213\n0.022\n0.000\n0.009\n0.009\n0.097\n\n\nappealing\n0.208\n0.034\n0.001\n0.009\n0.009\n0.085\n\n\nrewarding\n0.195\n0.005\n0.000\n0.007\n0.007\n0.105\n\n\npopular\n0.171\n0.017\n0.000\n0.006\n0.006\n0.095\n\n\nservice\n0.251\n0.088\n0.005\n0.018\n0.018\n0.136\n\n\nimpact\n0.255\n0.128\n0.011\n0.024\n0.024\n0.140\n\n\n\n\n\n\n\n\n\n\nThe Shapley values and Johnson’s relative weights each sum to the full-model \\(R^2\\) of np.float64(0.109), confirming both decompositions are correct."
+  },
+  {
+    "objectID": "projects/HW5/key_drivers_analysis (2).html#visualizing-the-drivers",
+    "href": "projects/HW5/key_drivers_analysis (2).html#visualizing-the-drivers",
+    "title": "Key Drivers Analysis",
+    "section": "Visualizing the Drivers",
+    "text": "Visualizing the Drivers\n\nWhich attributes matter most?\n\n\n\n\n\n\n\n\nFigure 1: Drivers ranked by Shapley value (share of explained variance).\n\n\n\n\n\nTrust, impact, and service stand out as the strongest unique drivers.\n\n\nDo the six metrics agree?\n\n\n\n\n\n\n\n\nFigure 2: Each importance metric, min-max scaled within its column.\n\n\n\n\n\nTrust, impact, and service stay dark (high) across every method, while popular, build, and rewarding stay light (low). The methods broadly agree.\n\n\nBivariate vs. partial importance\n\n\n\n\n\n\n\n\nFigure 3: Simple correlation vs. unique Shapley contribution.\n\n\n\n\n\nDrivers in the upper-right (trust, impact, service) are both strongly correlated and uniquely important.\n\n\nHow the drivers relate to one another\n\n\n\n\n\n\n\n\nFigure 4: Pairwise Pearson correlations among the nine drivers.\n\n\n\n\n\nThe drivers are positively but moderately correlated, which is why the partition methods spread importance more evenly than raw correlations alone would."
+  },
+  {
+    "objectID": "projects/HW5/key_drivers_analysis (2).html#bonus-shapley-values-for-a-logistic-model",
+    "href": "projects/HW5/key_drivers_analysis (2).html#bonus-shapley-values-for-a-logistic-model",
+    "title": "Key Drivers Analysis",
+    "section": "Bonus: Shapley Values for a Logistic Model",
+    "text": "Bonus: Shapley Values for a Logistic Model\nThe metrics above all treat satisfaction as continuous. As an extra step, I extend the Shapley decomposition to a logistic regression, which models a binary outcome — here, whether a customer is highly satisfied (a rating of 4 or 5) versus not. About 51% of customers fall in the highly-satisfied group, so the split is fairly balanced.\nBecause a logit has no ordinary \\(R^2\\), the fit metric becomes McFadden’s pseudo-\\(R^2\\), \\(1 - \\ell_{\\text{model}} / \\ell_{\\text{null}}\\), where \\(\\ell\\) is the model log-likelihood. The Shapley logic is identical: each driver’s value is its average marginal gain in pseudo-\\(R^2\\) across all \\(2^9\\) subsets of drivers.\n\n\nSum of logit Shapley values: 0.0770\nFull model pseudo-R^2:       0.0770\n\n\nThe values again sum to the full-model pseudo-\\(R^2\\), confirming the decomposition. The chart compares each driver’s linear Shapley value against its logistic-model counterpart.\n\n\n\n\n\n\n\n\nFigure 5: Linear Shapley (R²) vs. logistic Shapley (pseudo-R²).\n\n\n\n\n\nThe two models produce the same top tier — impact, trust, and service — so the conclusion is robust to whether satisfaction is treated as continuous or as a high/low binary outcome. The pseudo-\\(R^2\\) magnitudes are naturally smaller, since a logit explains a coarser, binary target."
+  },
+  {
+    "objectID": "projects/HW5/key_drivers_analysis (2).html#discussion",
+    "href": "projects/HW5/key_drivers_analysis (2).html#discussion",
+    "title": "Key Drivers Analysis",
+    "section": "Discussion",
+    "text": "Discussion\nThe metrics tell a consistent story. Trust, impact, and service rank at the top across essentially every method.\n\nBivariate vs. partial importance. All nine drivers have similar raw Pearson correlations (~0.17–0.26), but the partial metrics spread them out more because the drivers are correlated with one another.\nShapley and Johnson agree closely. Both decompose \\(R^2\\) and produce nearly identical rankings.\nUsefulness understates correlated drivers. Drop-one values are small because removing one correlated predictor barely hurts the model.\nRandom forest spreads importance more evenly but still places trust, impact, and service at the top.\nThe ranking survives a change of model. Decomposing a logistic model on a binary high/low-satisfaction outcome yields the same leading drivers, so the result is not an artifact of treating satisfaction as continuous.\n\nFor management, the takeaway is to prioritize the attributes that drive satisfaction most strongly and uniquely — trust, impact, and service."
+  },
+  {
+    "objectID": "projects/HW5/hw5_questions.html#overview",
+    "href": "projects/HW5/hw5_questions.html#overview",
+    "title": "Key Drivers Analysis",
+    "section": "",
+    "text": "This post replicates the variable-importance table from slide 75 of the Key Drivers slides. Using customer-satisfaction survey data, I measure how much each of nine perception attributes drives overall satisfaction, using six different importance metrics:\n\nPearson correlations — simple bivariate association with the outcome.\nStandardized regression coefficients — partial effect, controlling for other drivers.\nUsefulness (drop-one) — the drop in \\(R^2\\) when a variable is removed from the full model.\nShapley values — average marginal \\(R^2\\) contribution across all variable orderings (own implementation).\nJohnson’s relative weights — an approximation that partitions \\(R^2\\) among correlated predictors.\nMean decrease in Gini (Random Forest) — impurity-based importance from a random forest.\n\nThe polychoric correlations are omitted, as permitted by the assignment."
+  },
+  {
+    "objectID": "projects/HW5/hw5_questions.html#results",
+    "href": "projects/HW5/hw5_questions.html#results",
+    "title": "Key Drivers Analysis",
+    "section": "Results",
+    "text": "Results\n\n\n\n\nTable 1\n\n\n\n\n\n\n\n\n\n\nPearson Corr.\nStd. Coef.\nUsefulness\nShapley\nJohnson's RW\nRF Gini\n\n\n\n\ntrust\n0.256\n0.116\n0.008\n0.022\n0.022\n0.152\n\n\nbuild\n0.192\n0.020\n0.000\n0.007\n0.007\n0.100\n\n\ndiffers\n0.185\n0.028\n0.001\n0.007\n0.008\n0.090\n\n\neasy\n0.213\n0.022\n0.000\n0.009\n0.009\n0.097\n\n\nappealing\n0.208\n0.034\n0.001\n0.009\n0.009\n0.085\n\n\nrewarding\n0.195\n0.005\n0.000\n0.007\n0.007\n0.105\n\n\npopular\n0.171\n0.017\n0.000\n0.006\n0.006\n0.095\n\n\nservice\n0.251\n0.088\n0.005\n0.018\n0.018\n0.136\n\n\nimpact\n0.255\n0.128\n0.011\n0.024\n0.024\n0.140\n\n\n\n\n\n\n\n\n\n\nThe Shapley values and Johnson’s relative weights each sum to the full-model \\(R^2\\) of np.float64(0.109), confirming both decompositions are correct."
+  },
+  {
+    "objectID": "projects/HW5/hw5_questions.html#visualizing-the-drivers",
+    "href": "projects/HW5/hw5_questions.html#visualizing-the-drivers",
+    "title": "Key Drivers Analysis",
+    "section": "Visualizing the Drivers",
+    "text": "Visualizing the Drivers\n\nWhich attributes matter most?\n\n\n\n\n\n\n\n\nFigure 1: Drivers ranked by Shapley value (share of explained variance).\n\n\n\n\n\nTrust, impact, and service stand out as the strongest unique drivers.\n\n\nDo the six metrics agree?\n\n\n\n\n\n\n\n\nFigure 2: Each importance metric, min-max scaled within its column.\n\n\n\n\n\nTrust, impact, and service stay dark (high) across every method, while popular, build, and rewarding stay light (low). The methods broadly agree.\n\n\nBivariate vs. partial importance\n\n\n\n\n\n\n\n\nFigure 3: Simple correlation vs. unique Shapley contribution.\n\n\n\n\n\nDrivers in the upper-right (trust, impact, service) are both strongly correlated and uniquely important.\n\n\nHow the drivers relate to one another\n\n\n\n\n\n\n\n\nFigure 4: Pairwise Pearson correlations among the nine drivers.\n\n\n\n\n\nThe drivers are positively but moderately correlated, which is why the partition methods spread importance more evenly than raw correlations alone would."
+  },
+  {
+    "objectID": "projects/HW5/hw5_questions.html#bonus-shapley-values-for-a-logistic-model",
+    "href": "projects/HW5/hw5_questions.html#bonus-shapley-values-for-a-logistic-model",
+    "title": "Key Drivers Analysis",
+    "section": "Bonus: Shapley Values for a Logistic Model",
+    "text": "Bonus: Shapley Values for a Logistic Model\nThe metrics above all treat satisfaction as continuous. As an extra step, I extend the Shapley decomposition to a logistic regression, which models a binary outcome — here, whether a customer is highly satisfied (a rating of 4 or 5) versus not. About 51% of customers fall in the highly-satisfied group, so the split is fairly balanced.\nBecause a logit has no ordinary \\(R^2\\), the fit metric becomes McFadden’s pseudo-\\(R^2\\), \\(1 - \\ell_{\\text{model}} / \\ell_{\\text{null}}\\), where \\(\\ell\\) is the model log-likelihood. The Shapley logic is identical: each driver’s value is its average marginal gain in pseudo-\\(R^2\\) across all \\(2^9\\) subsets of drivers.\n\n\nSum of logit Shapley values: 0.0770\nFull model pseudo-R^2:       0.0770\n\n\nThe values again sum to the full-model pseudo-\\(R^2\\), confirming the decomposition. The chart compares each driver’s linear Shapley value against its logistic-model counterpart.\n\n\n\n\n\n\n\n\nFigure 5: Linear Shapley (R²) vs. logistic Shapley (pseudo-R²).\n\n\n\n\n\nThe two models produce the same top tier — impact, trust, and service — so the conclusion is robust to whether satisfaction is treated as continuous or as a high/low binary outcome. The pseudo-\\(R^2\\) magnitudes are naturally smaller, since a logit explains a coarser, binary target."
+  },
+  {
+    "objectID": "projects/HW5/hw5_questions.html#discussion",
+    "href": "projects/HW5/hw5_questions.html#discussion",
+    "title": "Key Drivers Analysis",
+    "section": "Discussion",
+    "text": "Discussion\nThe metrics tell a consistent story. Trust, impact, and service rank at the top across essentially every method.\n\nBivariate vs. partial importance. All nine drivers have similar raw Pearson correlations (~0.17–0.26), but the partial metrics spread them out more because the drivers are correlated with one another.\nShapley and Johnson agree closely. Both decompose \\(R^2\\) and produce nearly identical rankings.\nUsefulness understates correlated drivers. Drop-one values are small because removing one correlated predictor barely hurts the model.\nRandom forest spreads importance more evenly but still places trust, impact, and service at the top.\nThe ranking survives a change of model. Decomposing a logistic model on a binary high/low-satisfaction outcome yields the same leading drivers, so the result is not an artifact of treating satisfaction as continuous.\n\nFor management, the takeaway is to prioritize the attributes that drive satisfaction most strongly and uniquely — trust, impact, and service."
   }
 ]
